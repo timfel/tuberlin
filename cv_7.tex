@@ -72,21 +72,23 @@
 
 \clearpage
 
-\recipient{TU Berlin}{...... ...} % Letter recipient
+\recipient{Technische Universität Berlin}{- Der Präsident -\\
+  Dekan der Fakultät IV, Sekr. MAR 6-1\\
+  Marchstr. 23, 10587 Berlin} % Letter recipient
 \date{\today} % Letter date
-\opening{Sehr geehrte Damen und Herren,} % Opening greeting
-\closing{Mit freundlichen Grüßen,} % Closing phrase
-\enclosure[Anhänge]{Curriculum Vit\ae{}\\%
-  \hspace{4em} Lehrportfolio\\
-  \hspace{4em} Publikationsliste\\
-  \hspace{4em} MSc Zeugnis\\
-  \hspace{4em} Dissertationsurkunde\\
-  \hspace{4em} Erklärung zu Lehr- und Forschungsvorhaben\\
-  \hspace{4em} Publikationsproben} % List of enclosed documents
+\opening{Dear Sir or Madam,} % Opening greeting
+\closing{Best regards,} % Closing phrase
+\enclosure[Attachments]{\\
+  \hspace{4em} \hyperref[sec:cv]{Curriculum Vit\ae{}}\\%
+  \hspace{4em} \hyperref[sec:past-teaching]{Teaching Portfolio}\\
+  \hspace{4em} \hyperref[sec:publications]{Publications}\\
+  \hspace{4em} \hyperref[sec:msc]{Master of Science Certificate}\\
+  \hspace{4em} \hyperref[sec:phd]{Dissertation Certificate}\\
+  \hspace{4em} \hyperref[sec:research]{Research Plan}\\
+  \hspace{4em} \hyperref[sec:teaching]{Teaching Plan}\\
+  \hspace{4em} \hyperref[sec:selected-publications]{Selected Publications}} % List of enclosed documents
 
 \makelettertitle % Print letter title
-
-Dear Sir or Madam,
 
 After my dissertation I joined Oracle Labs has a senior member of technical
 staff. I joined Oracle Labs for the research opportunities it provided and
@@ -100,11 +102,11 @@ Besides this work, I am the principle investigator on the Oracle side for
 multiple research projects together with the Hasso Plattner Institute and the
 University of Cape Town. With the former I work on design patterns and tool
 support for polyglot programs and with the latter I collaborate on a clean
-design for a Python C extension API. All of these projects' have yielded
-intermediate results that have been incorporated in the GraalVM product. I also
-continued to co-author papers as part of these research collaborations, present
-at conferences, serve on conference and workshop committees, and teach at the
-Hasso Plattner Institute about topics related to my work at Oracle Labs.
+design for a Python C extension API. All projects have yielded results that have
+been incorporated in the GraalVM product. I also continued to co-author papers
+as part of these research collaborations, present at conferences, serve on
+conference and workshop committees, and teach at the Hasso Plattner Institute
+about topics related to my work at Oracle Labs.
 
 % Living history genius computing systems are here while we do provide programming
 % models and tools to make the best use of these heterogeneous programming systems
@@ -157,6 +159,7 @@ collaborate with the Hasso Plattner Institute at the University of Potsdam on
 tools and environments for dynamic languagues and polyglot programming.
 
 \section{Education}
+\label{sec:cv}
 
 \cventry{2012--2017}{Dr.rer-nat.}{Hasso Plattner Institute}{University of Potsdam}{Germany}{Summa Cum Laude}
 
@@ -255,6 +258,7 @@ tools and environments for dynamic languagues and polyglot programming.
   JNI}
 
 \section{Teaching}
+\label{sec:past-teaching}
 
 Where available, evaluation data from students is given. The evaluation data was
 only made available to the lecturers if enough students gave their score to
@@ -452,17 +456,20 @@ respondents was reported. Given below is the average of those averages.
 
 \cvitem{}{}
 
-\cvitem{In the Media}{Deutschlandfunk ``Computer und Kommunikation'', Jun 2014 -- ``Babelsberg - Eine neue Programmiersprache''}
-\cvitem{}{rbb ``Brandenburg aktuell'', Jan 2016  -- ``Programmieren für Kinder''}
-\cvitem{}{Potsdamer Neueste Nachrichten, Jun 2014 -- ``Der Babelsberg-Code''}
-\cvitem{}{Heise, Jun 2014 -- ``HPI stelllt neue Programmiersprache Babelsberg vor''}
+\cventry{In the Media}{\mdseries``Programmieren für Kinder''}{}{}{}{rbb ``Brandenburg aktuell'', 4. Jan 2016}
+\cventry{}{\mdseries``Babelsberg - Eine neue Programmiersprache''}{}{}{}{Deutschlandfunk ``Computer und Kommunikation'', 12. Jul 2014}
+\cventry{}{\mdseries``HPI kündigt neue Programmiersprache Babelsberg an''}{}{}{}{Computerwoche, 7. Jul 2014}
+\cventry{}{\mdseries``Neue Programmiersprache heißt „Babelsberg“''}{}{}{}{Märkische Allgemeine, 5. Jul 2014}
+\cventry{}{\mdseries``Neue Sprache''}{}{}{}{PreussenSpiegel, 2. Jul 2014}
+\cventry{}{\mdseries``HPI stelllt neue Programmiersprache Babelsberg vor''}{}{}{}{Heise, 30. Jun 2014}
+\cventry{}{\mdseries``Der Babelsberg-Code''}{}{}{}{Potsdamer Neueste Nachrichten, 27. Jun 2014}
 
 \cvitem{}{}
 
 \cvitem{Hobbies}{I tinker with, do repairs on, and program for old 8 and 16-bit
-  computers}
+  computers.}
 
-\cvitem{}{I run 10 kilometers in less than 50 minutes}
+\cvitem{}{I run 10 kilometers in less than 50 minutes.}
 
 \section{Scientific Community Participation}
 
@@ -494,6 +501,7 @@ respondents was reported. Given below is the average of those averages.
 \clearpage
 
 \section{Publications}
+\label{sec:publications}
 
 \nocite{*}
 
@@ -509,6 +517,7 @@ respondents was reported. Given below is the average of those averages.
 \clearpage
 
 \section{Research Plan}
+\label{sec:research}
 
 Heterogenous computing hardware has become more widespread and affordable in
 recent years. At the same time, end-user programmers and data scientists with
@@ -563,6 +572,7 @@ goal in three areas:
 \clearpage
 
 \section{Teaching Plan}
+\label{sec:teaching}
 
 Ich würde mich freuen in Grundlagenlehre zu helfen. Insbesondere könnte ich mir
 dies für die ``Einführung in die Programmierung'' als auch ``Softwaretechnik und
