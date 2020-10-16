@@ -76,7 +76,7 @@
   Dekan der Fakultät IV, Sekr. MAR 6-1\\
   Marchstr. 23, 10587 Berlin} % Letter recipient
 \date{\today} % Letter date
-\opening{Dear Sir or Madam,} % Opening greeting
+\opening{\textbf{Kennziffer}: IV-427/20\\\vspace{2\parskip} Dear Sir or Madam,} % Opening greeting
 \closing{Best regards,} % Closing phrase
 \enclosure[Attachments]{\\
   \hspace{4em} \hyperref[sec:cv]{Curriculum Vit\ae{}}\\%
@@ -107,6 +107,19 @@ been incorporated in the GraalVM product. I also continued to co-author papers
 as part of these research collaborations, present at conferences, serve on
 conference and workshop committees, and teach at the Hasso Plattner Institute
 about topics related to my work at Oracle Labs.
+
+Given the opportunity to work at the TU, I expect to be able to continue to
+collaborate with and acquire funding from Oracle Labs, as well as from other
+industry partners. I expect that the research I would be conducting at the
+university would continue to be of great interest to industry research groups as
+well, as it was when I was a PhD and Post-Doc. I also believe that students
+could benefit from these connections. There are varied internship opportunities
+both at Oracle Labs as well as other companies I am in contact with. In my
+experience, teaching also benefits from current industry collaborations as a
+motivating factor for students.
+
+I would be glad to hear from you and for a chance to further discuss the
+research and teaching plans I have attached below.
 
 % Living history genius computing systems are here while we do provide programming
 % models and tools to make the best use of these heterogeneous programming systems
@@ -522,61 +535,93 @@ respondents was reported. Given below is the average of those averages.
 Heterogenous computing hardware has become more widespread and affordable in
 recent years. At the same time, end-user programmers and data scientists with
 little or no formal programming education are increasingly writing programs to
-process large amounts of data. While hardware vendors and the research community
-have demonstrated libraries [OpenMP] and languages [CUDA, OpenCL] to take
-advantage of new hardware capabilities, high-level "scripting" languages such as
-Python and JavaScript are still popular among the scientific computing
-community. These languages are inherently single-threaded and not designed for
-high-performance computing. Although popular libraries such as NumPy,
-Tensorflow, or scikit-learn [1,2,3] work around this problem to an extent, in
-practice the highly optimized code in these packages is interleaved with
-high-level language code and thus inherently bottlenecked.
+process large amounts of data. While hardware vendors and the industry and
+research community have demonstrated libraries (such as OpenMP) and languages
+(such as CUDA and OpenCL) to take advantage of new hardware capabilities,
+high-level "scripting" languages such as Python, R, or JavaScript are still popular
+among the scientific computing community. These languages are inherently
+single-threaded and not designed for high-performance computing. Although
+popular libraries such as NumPy, Tensorflow, or scikit-learn work around this
+problem to an extent, in practice the highly optimized code in these packages is
+interleaved with high-level language code and thus inherently bottlenecked.
 
 Millions of dollars by Google, Mozilla, Microsoft and others have been poured
-into making JavaScript VMs fast. However, the need to balance the needs of the
-browser environment in which JavaScript is often used with the needs for a
-high-performance data processing language require trade-offs between warmup time
-and peak performance. Furthermore, the optimizations applied by optimizing
-virtual machines for JavaScript, Python, and other dynamic languages are still
-focused on making single-threaded execution on the CPU as fast as possible.
+into making JavaScript VMs fast, an effort not expended so far to Python or
+R. Even so, the need to balance the needs of the browser environment in which
+JavaScript is often used with the needs for a high-performance data processing
+language require trade-offs between warmup time and peak
+performance. Furthermore, the optimizations applied by optimizing virtual
+machines for JavaScript, Python, and other dynamic languages are still focused
+on making single-threaded execution on the CPU as fast as possible. Making use
+of auxiliary compute hardware is left to libraries and thus, ultimately, to the
+user of these languages.
 
 As the typical size of problems for data scientists and end user programmers
 grows and these groups have access to increasingly affordable GPU and FPGA
 hardware, scripting languages and their optimizing virtual machines need to
 improve to provide good performance. I propose to conduct research towards this
 goal in three areas:
-\begin{itemize}
-\item I want to continue research upon the state of the art to identify and
-  optimize high level patterns and control flow in languages to make use of
-  auxiliary compute hardware. Work done on loop fusion and lazy evaluation
-  [Weld], Columnar objects [Mattis], storage strategies [Gulenko], Megaguards
-  [Qunaibit], and library-specific optimizations such as Numba or CuPy offer
-  promising starting points for more runtime optimization techniques
-\item Declarative programming techniques such as logic and constraint
-  programming [Babelsberg, Squander, Kaplan] as well as reactive programming
-  [Ramson, Salvaneschi] offer the chance for programmers to express intent. This
-  can allow optimizing compilers to produce code more flexibly than for
+\begin{description}
+\item[Automatic Parallelization and Offloading] I want to continue research upon
+  the state of the art to identify and optimize high level patterns and control
+  flow in languages to make use of auxiliary compute hardware. Work done on loop
+  fusion and lazy evaluation [Weld], Columnar objects [Mattis], storage
+  strategies [Gulenko], Megaguards [Qunaibit], and library-specific
+  optimizations such as Numba or CuPy offer promising starting points for
+  higher-level optimization techniques.
+
+  Using runtime feedback in our Python implementation on GraalVM, for example,
+  we have found that we can vectorize Python-level loops. Building upon that, we
+  should be able to determine when a Python loop runs long enough and over
+  enough data to warrant offloading to a GPU for highly parallel
+  processing. With distributed and multi-tenant systems, available processing
+  hardware, communication overhead, and load are not fixed and under the control
+  of the optimizing compiler. We need to investigate using learning approaches
+  to let the compiler learn the behavior and performance properties of hardware
+  to improve optimizations heuristics.
+\item[Declarative Programming and Data Transformations] Declarative programming
+  techniques such as logic and constraint programming [Babelsberg, Squander,
+  Kaplan] as well as reactive programming [Ramson, Salvaneschi] offer the chance
+  for programmers to express intent. Rather than describing how to transform and
+  process data, desired outcomes and invariants can be set for the system. The
+  optimal choice of algorithm can thus be a runtime decision based on the
+  observed system behavior, available hardware, and input data.
+
+  This can allow optimizing compilers to produce code more flexibly than for
   imperative programming techniques where the algorithm to find the solution is
   dictated in the code. I plan to continue to work on such programming language
   features to make languages more expressive and allow for better optimization
   at the same time.
-\item Popular scripting languages do not allow all programming paradigms to
-  exist equally. Additionally, libraries of interest to users or with specific
-  features may not be available for all languages. The increasingly common
-  notebook-style development environments can be a starting point for combining
-  multiple different languages in a convenient way [Niephaus]. I plan to conduct
-  further research into polyglot programming environments and the optimization
-  across language boundaries [Wuerthinger]
-\end{itemize}
+\item[Multi-language Optimization and Tooling] Popular scripting languages do
+  not allow all programming paradigms to exist equally. Additionally, libraries
+  of interest to users or with specific features may not be available for all
+  languages. The increasingly common notebook-style development environments can
+  be a starting point for combining multiple different languages in a convenient
+  way, as we have demonstrated in our recent collaboration between Oracle Labs
+  and the HPI.
+
+  I plan to conduct further research into polyglot programming tools and
+  environments, as well as the optimization across language boundaries. This may
+  help programmers be able to choose the proper abstractions in different parts
+  of their code without having to sacrifice performance or tooling.
+\end{description}
 
 \clearpage
 
 \section{Teaching Plan}
 \label{sec:teaching}
 
-Ich würde mich freuen in Grundlagenlehre zu helfen. Insbesondere könnte ich mir
-dies für die ``Einführung in die Programmierung'' als auch ``Softwaretechnik und
-Programmierparadigmen'' sowie verwandte Einführungsveranstaltungen vorstellen.
+I would be happy to help with the teaching of fundamentals. Especially the
+courses ``Einführung in die Programmierung'' and ``Softwaretechnik und
+Programmierparadigmen'' seem to also fit well with the research group I would be
+seeking to establish. In the past I have enjoyed teaching in the first semesters
+immensely, as it gives me the opportunity to observe the changes in preexisting
+knowledge and expectations for personal development that students start with
+into a computer science curriculum.
+
+% Ich würde mich freuen in Grundlagenlehre zu helfen. Insbesondere könnte ich mir
+% dies für die ``Einführung in die Programmierung'' als auch ``Softwaretechnik und
+% Programmierparadigmen'' sowie verwandte Einführungsveranstaltungen vorstellen.
 
 In der fachbereichsspezifischen Lehre möchte ich mich insbesondere in
 Projektseminaren an aktuellen Forschungsthemen und Fragestellungen der Industrie
