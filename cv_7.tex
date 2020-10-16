@@ -31,6 +31,7 @@
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
+\usepackage{pdfpages}
 
 \usepackage[backend=biber,style=apa,autocite=inline]{biblatex}
 \DeclareLanguageMapping{english}{english-apa}
@@ -667,6 +668,10 @@ Veranstaltungen vorstellen:
 \item[Programming Tools and Environments]
 \item[Operational Semantics of Programming Languages]
 \end{description}
+
+\includepdf[pages=-]{phdcert.pdf}
+
+\includepdf[pages=-]{msccert.pdf}
 
 \end{document}
 %%% Local Variables:
