@@ -56,7 +56,7 @@
 % \phone{(000) 111 1112}
 % \fax{(000) 111 1113}
 \email{timfelgentreff@gmail.com}
-\homepage{https://timfelgentreff.de}{timfelgentreff.de} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+% \homepage{https://timfelgentreff.de}{timfelgentreff.de} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
 % \extrainfo{}
 \photo[70pt][0.4pt]{pictures/picture} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 % \quote{"A witty and playful quotation" - John Smith}
@@ -79,77 +79,55 @@
 \date{\today} % Letter date
 \opening{\textbf{Kennziffer}: IV-427/20\\\vspace{2\parskip} Dear Sir or Madam,} % Opening greeting
 \closing{Best regards,} % Closing phrase
-\enclosure[Attachments]{\\
-  \hspace{4em} \hyperref[sec:cv]{Curriculum Vit\ae{}}\\%
-  \hspace{4em} \hyperref[sec:past-teaching]{Teaching Portfolio}\\
-  \hspace{4em} \hyperref[sec:publications]{Publications}\\
-  \hspace{4em} \hyperref[sec:msc]{Master of Science Certificate}\\
-  \hspace{4em} \hyperref[sec:phd]{Dissertation Certificate}\\
-  \hspace{4em} \hyperref[sec:research]{Research Plan}\\
-  \hspace{4em} \hyperref[sec:teaching]{Teaching Plan}\\
-  \hspace{4em} \hyperref[sec:selected-publications]{Selected Publications}} % List of enclosed documents
+\enclosure[Attachments]{
+  \begin{minipage}[t]{0.8\linewidth}
+    \hyperref[sec:cv]{Curriculum Vit\ae{}},
+    \hyperref[sec:past-teaching]{Teaching Experience},
+    \hyperref[sec:publications]{List of Publications},
+    \hyperref[sec:msc]{Master of Science Certificate},
+    \hyperref[sec:phd]{Dissertation Certificate},
+    \hyperref[sec:research]{Research Proposal},
+    \hyperref[sec:teaching]{Prospective Teaching Draft},
+    \hyperref[sec:selected-publications]{Copies of selected Publications}
+  \end{minipage}
+} % List of enclosed documents
 
 \makelettertitle % Print letter title
 
-After my dissertation I joined Oracle Labs has a senior member of technical
-staff. I joined Oracle Labs for the research opportunities it provided and
-because it allowed me to focus on topics such as virtual machine optimizations,
-programming tools, and language design that I am interested in. During my time
-at Oracle Labs I started a Python implementation from scratch and over the
-course of three years became a team lead to 7 other engineers working on this
-Python implementation.
+I am writing to you to apply for the University Professorship for the field of
+``Programming Languages'' that you published on August 15, 2020.
 
-Besides this work, I am the principle investigator on the Oracle side for
-multiple research projects together with the Hasso Plattner Institute and the
-University of Cape Town. With the former I work on design patterns and tool
-support for polyglot programs and with the latter I collaborate on a clean
-design for a Python C extension API. All projects have yielded results that have
-been incorporated in the GraalVM product. I also continued to co-author papers
-as part of these research collaborations, present at conferences, serve on
-conference and workshop committees, and teach at the Hasso Plattner Institute
-about topics related to my work at Oracle Labs.
+After my dissertation I joined Oracle Labs for the research opportunities it
+provided in areas that I am interested in: virtual machine optimizations,
+language design, and programming tools. I would be glad for the opportunity to
+continue research in these areas--but with a broader scope--as well as teach
+these and related topics.
 
-Given the opportunity to work at the TU, I expect to be able to continue to
-collaborate with and acquire funding from Oracle Labs, as well as from other
-industry partners. I expect that the research I would be conducting at the
-university would continue to be of great interest to industry research groups as
-well, as it was when I was a PhD and Post-Doc. I also believe that students
-could benefit from these connections. There are varied internship opportunities
-both at Oracle Labs as well as other companies I am in contact with. In my
-experience, teaching also benefits from current industry collaborations as a
-motivating factor for students.
+During my time at Oracle I started a new Python implementation based on the
+Truffle AST optimization framework. Over the course of three years I became a
+team lead to 7 other research engineers working on this implementation. I am
+also the principle investigator on the Oracle side for multiple research grants
+given to the Hasso Plattner Institute and the University of Cape Town. With the
+former I work on design patterns and tool support for polyglot programs and with
+the latter I collaborate on a new design for a Python C extension API more
+amenable to JIT optimizations. All projects have already yielded results that
+have been incorporated in the GraalVM codebase. I have also continued to
+co-author papers as part of these research collaborations, present at
+conferences, serve on conference and workshop committees, and teach at the Hasso
+Plattner Institute on topics related to my work at Oracle Labs.
+
+If I were the opportunity to work with you I expect to be able to continue to
+collaborate with and acquire funding from Oracle Labs. I expect that the
+research I would be conducting at the university would continue to be of great
+interest to Oracle and other industry research groups as well, as it was when I
+was a PhD and Post-Doc. I also believe that students can benefit from these
+connections to industry: not only for the varied internship opportunities, but
+also (in my experience) as a motivating factor for student project work.
 
 I would be glad to hear from you and for a chance to further discuss the
-research and teaching plans I have attached below.
+research and teaching proposals I have attached below.
 
-% Living history genius computing systems are here while we do provide programming
-% models and tools to make the best use of these heterogeneous programming systems
-% more and more non professional programmers with little or no formal education
-% and programming are using heterogenous systems to process large amounts of data
-% these users tend to focus on high level dynamic programming language for the
-% ease of use hello this poses new challenges two optimizing compilers and runtime
-% systems stop fat laptop XX laugh runtime optimizations have improved from
-% localized peephole style optimizations on byte codes 2 complex heuristics
-% involving branch duplication splitting and advanced inlining panjaa scape
-% analysis techniques however all of these techniques that are in widespread use
-% in the industry still focus on a small number off compute engines with future
-% genius systems in widespread use optimizing runtime systems must provide the
-% tools for the users to make optimum use of history genius hardware and
-% automatically optimize code to run not only as fast as possible but also on the
-% fastest available hardware. In order to enable these advanced optimizations
-% hello laugh higher level abstractions must be optimized than previously that is
-% the state of the art.
-
-% Give a little more programmers today have little or no formal programming
-% education programming languages must provide high level must provide powerful
-% high level abstractions in order to enable the users love to make use of
-% advanced hardware capabilities such high level abstractions include declarative
-% high specifications instead of imperative rules such as constraints and reactive
-% programming systems Food
-
-% \lipsum[1-2] % Dummy text
-% \lipsum[4] % Dummy text
-
+\enlargethispage{1cm}
 \makeletterclosing % Print letter signature
 
 \newpage
@@ -512,17 +490,15 @@ respondents was reported. Given below is the average of those averages.
 \cvitem{}{Onward! 2014}
 \cvitem{}{Symposium on Open Collaboration 2014}
 
-\clearpage
-
 \section{Publications}
 \label{sec:publications}
 
 \nocite{*}
 
-\printbibliography[keyword=journal,heading=subbibliography,title=Journal]
-\printbibliography[keyword=conference,heading=subbibliography,title=Conference]
-\printbibliography[keyword=symposium,heading=subbibliography,title=Symposium]
-\printbibliography[keyword=workshop,heading=subbibliography,title=Workshop]
+\printbibliography[keyword=journal,heading=subbibliography,title=Journals]
+\printbibliography[keyword=conference,heading=subbibliography,title=Conferences]
+\printbibliography[keyword=symposium,heading=subbibliography,title=Symposia]
+\printbibliography[keyword=workshop,heading=subbibliography,title=Workshops]
 \printbibliography[keyword=techreport,heading=subbibliography,title=Technical Reports]
 \printbibliography[keyword=thesis,heading=subbibliography,title=Thesis]
 
@@ -614,8 +590,8 @@ goal in three areas:
 
 I would be happy to help with the teaching of fundamentals. Especially the
 courses ``Einführung in die Programmierung'' and ``Softwaretechnik und
-Programmierparadigmen'' seem to also fit well with the research group I would be
-seeking to establish. In the past I have enjoyed teaching in the first semesters
+Programmierparadigmen'' seem to also fit well with the research group you are
+establishing. In the past I have enjoyed teaching in the first semesters
 immensely, as it gives me the opportunity to observe the changes in preexisting
 knowledge and expectations for personal development that students start with
 into a computer science curriculum.
@@ -669,9 +645,34 @@ Veranstaltungen vorstellen:
 \item[Operational Semantics of Programming Languages]
 \end{description}
 
+\phantomsection
+\label{sec:phd}
 \includepdf[pages=-]{phdcert.pdf}
 
+\phantomsection
+\label{sec:msc}
 \includepdf[pages=-]{msccert.pdf}
+
+\clearpage
+\phantomsection
+\label{sec:selected-publications}
+\thispagestyle{plain}
+\vspace*{\fill}
+\parbox[t]{\hintscolumnwidth}{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.95ex}}}
+\hspace{\separatorcolumnwidth}
+\parbox[t]{\maincolumnwidth}{\strut\sectionstyle{\Huge Selected Publications}}
+\vspace{\fill}
+\newpage
+
+\includepdf[pages=-]{papers/FelgentreffMillsteinBorningHirschfeld_2015_ChecksAndBalancesConstraintSolvingWithoutSurprisesInObjectConstraintProgrammingLanguages_AuthorsVersion.pdf}
+
+\includepdf[pages=-]{papers/FelgentreffPapeReinHirschfeld_2016_HowToBuildAHighPerformanceVmForSqueakSmalltalkInYourSpareTimeAnExperienceReportOfUsingTheRPythonToolchain_AcmDL.pdf}
+
+\includepdf[pages=-]{papers/FelgentreffLinckeHirschfeldThamsen_2015_LivelyGroupsSharedBehaviorInAWorldOfObjectsWithoutClassesOrPrototypes_AuthorsVersion.pdf}
+
+\includepdf[pages=-]{papers/FelgentreffHirschfeldGraberBorningMasuhara_2016_DeclaringConstraintsOnObjectOrientedCollections_IPSJ-TPRO0904003.pdf}
+
+\includepdf[pages=-]{papers/FelgentreffLehmannHirschfeldGerstenbergReschkeRueckertSieglerGraichenNicolaiSwart_2016_AutomaticallySelectingAndOptimizingConstraintSolverProceduresForObjectConstraintLanguages_AuthorsVersion.pdf}
 
 \end{document}
 %%% Local Variables:
