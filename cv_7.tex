@@ -136,8 +136,30 @@ research and teaching proposals I have attached below.
 %	CURRICULUM VITAE
 %----------------------------------------------------------------------------------------
 
-\photo[200pt][0.0pt]{pictures/etoys_pic.jpg}
-\makecvtitle % Print the CV title
+% \photo[200pt][0.0pt]{pictures/etoys_pic.jpg}
+% \makecvtitle % Print the CV title
+
+% custom title maybe?
+\begin{minipage}[t]{0.45\linewidth}
+  \includegraphics[width=200pt]{pictures/etoys_pic.jpg}%
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.49\linewidth}
+  \begin{flushright}
+    \namestyle{Tim Felgentreff}
+    \addressfont\color{color2}%
+    \begin{tabular}[b]{@{}r@{}}%
+      \makenewline\addresssymbol Straße zum Löwen 3%
+      \makenewline\14109 Berlin
+      \makenewline\mobilesymbol 0177 33 81 411%
+      \makenewline\emailsymbol\emaillink{timfelgentreff@gmail.com}
+    \end{tabular}
+    
+    \\[1.25em]\titlestyle{Curriculum Vit\ae{}}
+  \end{flushright}
+  % \\[8.6em]
+\end{minipage}
+\vspace{2\parskip}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
