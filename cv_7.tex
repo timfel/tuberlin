@@ -37,6 +37,9 @@
 \DeclareLanguageMapping{english}{english-apa}
 \addbibresource{cv.bib}
 
+\newcommand*{\cvmultilineitem}[3]{%
+  \cvitem{#1}{#2%
+    \newline{}\begin{minipage}[t]{\linewidth}\small #3\end{minipage}}}
 
 \usepackage[scale=0.75]{geometry} % Reduce document margins
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
@@ -287,147 +290,95 @@ respondents was reported. Given below is the average of those averages.
 
 \cvitem{}{}
 
-\cvitem{Summer 2019}{\emph{Virtuelle Ausführungsumgebungen}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Fabio Niephaus, Dr. Tim Felgentreff (ext)}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.29}
+\cvmultilineitem{Summer 2019}{\emph{Virtuelle Ausführungsumgebungen}}{
+  Prof. Dr. Robert Hirschfeld, Tobias Pape, Fabio Niephaus, Dr. Tim Felgentreff (ext)\\
+  Evaluation: 1.29}
 % \cvlistdoubleitem{showed respect for the students: 1.2}{imparted knowledge: 1.0}
 % \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.5}
 % \cvlistdoubleitem{had a pleasant way of presenting: 1.3}{had a comfortable pace: 1.7}
-\cvitem{Summer 2018}{\emph{Master's Thesis: Daniel Stople - Graal-LSP: A Language Server Implementation with Polyglot Support for the GraalVM}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff (ext)}
+\cvmultilineitem{Summer 2018}{\emph{Master's Thesis: Daniel Stople - Graal-LSP: A Language Server Implementation with Polyglot Support for the GraalVM}}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff (ext)}
 
-\cvitem{Summer 2017}{\emph{Master's Thesis: Fabio Niephaus - Squimera: A live, Smalltalk-based IDE for Scripting Languages}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff}
-\cvitem{}{\emph{Master's Thesis: Bastian Kruck - Crossing Abstraction Barriers When Debugging Code Transformations: Live Debugging With Compilers}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff}
-\cvitem{}{\emph{Softwaretechnik I}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Tobias Pape, Patrick Rein, Marcel Taeumel, Toni Mattis, Stefan Ramson, Dr. Tim Felgentreff}
+\cvmultilineitem{Summer 2017}{\emph{Master's Thesis: Fabio Niephaus - Squimera: A live, Smalltalk-based IDE for Scripting Languages}}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff}
+\cvmultilineitem{}{\emph{Master's Thesis: Bastian Kruck - Crossing Abstraction Barriers When Debugging Code Transformations: Live Debugging With Compilers}}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff}
+\cvmultilineitem{}{\emph{Softwaretechnik I}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Tobias Pape, Patrick Rein, Marcel Taeumel, Toni Mattis, Stefan Ramson, Dr. Tim Felgentreff}
 
-\cvitem{Winter 2016}{\emph{Softwarearchitektur}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Patrick Rein, Dr. Jens Lincke, Dr. Michael Perscheid, Tim Felgentreff, Stefan Ramson}
-\cvitem{}{\emph{Live Programming Systems}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Stefan Ramson, Tim Felgentreff, Patrick Rein}
-\cvitem{}{\emph{Software Design}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Stefan Ramson, Tim Felgentreff}
-\cvitem{}{\emph{Virtual Machines and Execution Environments}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Tim Felgentreff}
-\cvitem{}{openHPI Online Course: "Zusammenhänge entdecken, Phänomene verstehen: Programmieren mit Etoys"}
-\vspace{-0.7em}\cvitem{}{\small Tim Felgentreff}
+\cvmultilineitem{Winter 2016}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Patrick Rein, Dr. Jens Lincke, Dr. Michael Perscheid, Tim Felgentreff, Stefan Ramson}
+\cvmultilineitem{}{\emph{Live Programming Systems}}{\small Prof. Dr. Robert Hirschfeld, Stefan Ramson, Tim Felgentreff, Patrick Rein}
+\cvmultilineitem{}{\emph{Software Design}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Stefan Ramson, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Virtual Machines and Execution Environments}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Tim Felgentreff}
+\cvmultilineitem{}{openHPI Online Course: "Zusammenhänge entdecken, Phänomene verstehen: Programmieren mit Etoys"}{\small Tim Felgentreff}
 
-\cvitem{Summer 2016}{\emph{Softwaretechnik I}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Patrick Rein, Marcel Taeumel, Dr. Jens Lincke, Stefan Ramson, Toni Mattis, Tim Felgentreff, Dr. Michael Perscheid}
-\cvitem{}{\emph{End-user Programming}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Patrick Rein, Marcel Taeumel}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.32}
+\cvmultilineitem{Summer 2016}{\emph{Softwaretechnik I}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Patrick Rein, Marcel Taeumel, Dr. Jens Lincke, Stefan Ramson, Toni Mattis, Tim Felgentreff, Dr. Michael Perscheid}
+\cvmultilineitem{}{\emph{End-user Programming}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Patrick Rein, Marcel Taeumel\\Evaluation: 1.32}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.6}
 % \cvlistdoubleitem{addressed questions and proposals: 1.3}{seemed to be well prepared: 1.8}
 % \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.2}
-\cvitem{}{\emph{Virtual Machines}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Tim Felgentreff}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.17}
+\cvmultilineitem{}{\emph{Virtual Machines}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Tim Felgentreff\\Evaluation: 1.17}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.2}
 % \cvlistdoubleitem{addressed questions and proposals: 1.2}{seemed to be well prepared: 1.2}
 % \cvlistdoubleitem{was available outside the course: 1.2}{actively supported me/my team: 1.2}
-\cvitem{}{\emph{Web-based Development Environments}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Stefan Ramson, Patrick Rein, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Web-based Development Environments}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Stefan Ramson, Patrick Rein, Tim Felgentreff}
 
-\cvitem{Winter 2015}{\emph{Bachelor's Project: Improving Hosted Continuous Integration Services}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Dr. Jens Lincke}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.0}
+\cvmultilineitem{Winter 2015}{\emph{Bachelor's Project: Improving Hosted Continuous Integration Services}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Dr. Jens Lincke\\Evaluation: 1.0}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.0}
 % \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.0}
 % \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.0}
-\cvitem{}{\emph{Einführung in die Programmiertechnik I}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Toni Mattis, Tim Felgentreff, Marcel Taeumel, Dr. Jens Lincke, Stefan Ramson}
-\cvitem{}{\emph{Softwarearchitektur}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Patrick Rein, Dr. Jens Lincke, Tim Felgentreff, Dr. Michael Perscheid, Stefan Ramson}
-\cvitem{}{\emph{Programmiersprachen: Konzepte, Werkzeuge und Umgebungen}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Patrick Rein, Tim Felgentreff, Marcel Taeumel, Toni Mattis}
-\cvitem{}{\emph{Software Design}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Tim Felgentreff, Stefan Ramson}
+\cvmultilineitem{}{\emph{Einführung in die Programmiertechnik I}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Toni Mattis, Tim Felgentreff, Marcel Taeumel, Dr. Jens Lincke, Stefan Ramson}
+\cvmultilineitem{}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Patrick Rein, Dr. Jens Lincke, Tim Felgentreff, Dr. Michael Perscheid, Stefan Ramson}
+\cvmultilineitem{}{\emph{Programmiersprachen: Konzepte, Werkzeuge und Umgebungen}}{\small Prof. Dr. Robert Hirschfeld, Patrick Rein, Tim Felgentreff, Marcel Taeumel, Toni Mattis}
+\cvmultilineitem{}{\emph{Software Design}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Tim Felgentreff, Stefan Ramson}
 
-\cvitem{Summer 2015}{\emph{Constraint-basierte Programmierung}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.38}
+\cvmultilineitem{Summer 2015}{\emph{Constraint-basierte Programmierung}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke\\Evaluation: 1.38}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.2}
 % \cvlistdoubleitem{addressed questions and proposals: 1.2}{seemed to be well prepared: 1.9}
 % \cvlistdoubleitem{was available outside the course: 1.2}{actively supported me/my team: 1.1}
 % \cvlistdoubleitem{conducted the seminar in an interesting way: 1.8}{created a good structure of the seminar: 1.6}
-\cvitem{}{\emph{Master's Project: Spur to go faster: Low-level Functionality in a High-Level Language}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape, Marcel Taeumel}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.1}
+\cvmultilineitem{}{\emph{Master's Project: Spur to go faster: Low-level Functionality in a High-Level Language}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape, Marcel Taeumel\\Evaluation: 1.1}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.0}
 % \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.3}
 % \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.3}
-\cvitem{}{\emph{Master's Thesis: Stefan Lehmann - Scoping Constraints and Reactive Behavior: Towards a Practical Object Constraint Programming Tool}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Master's Thesis: Stefan Lehmann - Scoping Constraints and Reactive Behavior: Towards a Practical Object Constraint Programming Tool}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
 
-\cvitem{Winter 2014}{\emph{Master's Thesis: Maria Graber - Specifying and Solving Logic Puzzles with Babelsberg/S}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
-\cvitem{}{\emph{Master's Thesis: Anton Gulenko - Allocation Removal in Modern Object Oriented VMs}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
-\cvitem{}{\emph{Bachelor's Project: Example-driven Exploration in Dynamically-typed Programming Environments}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Jens Lincke, Tim Felgentreff}
-\cvitem{}{\emph{Ausgewählte Programmiersprachkonzepte}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Tobias Pape, Tim Felgentreff}
-\cvitem{}{\emph{Softwarearchitektur}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Dr. Michael Perscheid, Jens Lincke, Tim Felgentreff}
-\cvitem{}{\emph{Kontextorientiertes Programmieren}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Marcel Taeumel, Tobias Pape, Tim Felgentreff}
-\cvitem{}{\emph{Modulsysteme}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke, Marcel Taeumel, Tobias Pape}
-\cvitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.36}
+\cvmultilineitem{Winter 2014}{\emph{Master's Thesis: Maria Graber - Specifying and Solving Logic Puzzles with Babelsberg/S}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Master's Thesis: Anton Gulenko - Allocation Removal in Modern Object Oriented VMs}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Bachelor's Project: Example-driven Exploration in Dynamically-typed Programming Environments}}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Jens Lincke, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Ausgewählte Programmiersprachkonzepte}}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Tobias Pape, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Dr. Michael Perscheid, Jens Lincke, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Kontextorientiertes Programmieren}}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Marcel Taeumel, Tobias Pape, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Modulsysteme}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke, Marcel Taeumel, Tobias Pape}
+\cvmultilineitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape\\Evaluation: 1.36}
 % \cvlistdoubleitem{showed respect for the students: 1.1}{imparted knowledge: 1.0}
 % \cvlistdoubleitem{addressed questions and proposals: 1.2}{seemed to be well prepared: 1.8}
 % \cvlistdoubleitem{was available outside the course: 1.5}{actively supported me/my team: 1.5}
 % \cvlistdoubleitem{conducted the seminar in an interesting way: 1.4}{created a good structure of the seminar: 1.4}
 
-\cvitem{Summer 2014}{\emph{Master's Thesis: Philipp Tessenow - Extending a Dynamic Programming Language and Runtime Environment with Access Control}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Gilad Bracha (ext), Tim Felgentreff}
-\cvitem{}{\emph{Master's Project: Software Transactional Memory for RSqueak/VM}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape}
-\cvitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape}
-\cvitem{}{\emph{Constraint-basierte Programmierung}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.2}
+\cvmultilineitem{Summer 2014}{\emph{Master's Thesis: Philipp Tessenow - Extending a Dynamic Programming Language and Runtime Environment with Access Control}}{\small Prof. Dr. Robert Hirschfeld, Gilad Bracha (ext), Tim Felgentreff}
+\cvmultilineitem{}{\emph{Master's Project: Software Transactional Memory for RSqueak/VM}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape}
+\cvmultilineitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape}
+\cvmultilineitem{}{\emph{Constraint-basierte Programmierung}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff\\Evaluation: 1.2}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.3}
 % \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.0}
 % \cvlistdoubleitem{was available outside the course: 1.1}{actively supported me/my team: 1.4}
 % \cvlistdoubleitem{conducted the seminar in an interesting way: 1.3}{created a good structure of the seminar: 1.5}
 
-\cvitem{Winter 2013}{\emph{Master's Thesis: Lars Wassermann - Tracing Algorithmic Primitives in R/SqueakVM}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
-\cvitem{}{\emph{Bachelor's Project: ecoControl: Entwurf und Implementierung einer Software zur Optimierung heterogener Energiesysteme in Mehrfamilienhäusern}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke, Marcel Taeumel}
-\cvitem{}{\emph{Einführung in die Programmiertechnik I}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Tim Felgentreff, Tobias Pape}
-\cvitem{}{\emph{Softwarearchitektur}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Prof. Dr. Robert Hirschfeld, Bastian Steinert, Marcel Taeumel, Tim Felgentreff, Tobias Pape}
-\cvitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Bastian Steinert, Tim Felgentreff, Tobias Pape}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.06}
+\cvmultilineitem{Winter 2013}{\emph{Master's Thesis: Lars Wassermann - Tracing Algorithmic Primitives in R/SqueakVM}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Bachelor's Project: ecoControl: Entwurf und Implementierung einer Software zur Optimierung heterogener Energiesysteme in Mehrfamilienhäusern}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke, Marcel Taeumel}
+\cvmultilineitem{}{\emph{Einführung in die Programmiertechnik I}}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Tim Felgentreff, Tobias Pape}
+\cvmultilineitem{}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Prof. Dr. Robert Hirschfeld, Bastian Steinert, Marcel Taeumel, Tim Felgentreff, Tobias Pape}
+\cvmultilineitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}{\small Prof. Dr. Robert Hirschfeld, Bastian Steinert, Tim Felgentreff, Tobias Pape\\Evaluation: 1.06}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.0}
 % \cvlistdoubleitem{addressed questions and proposals: 1.1}{seemed to be well prepared: 1.0}
 % \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.2}
 % \cvlistdoubleitem{conducted the seminar in an interesting way: 1.1}{}
 
-\cvitem{Summer 2013}{\emph{Interactive Representations of Data Structures and Algorithms}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Marcel Taeumel, Tim Felgentreff}
+\cvmultilineitem{Summer 2013}{\emph{Interactive Representations of Data Structures and Algorithms}}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Marcel Taeumel, Tim Felgentreff}
 
-\cvitem{Winter 2012}{\emph{Bachelor's project: MagLev – Object Persistence with Ruby and Smalltalk}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.0}
+\cvmultilineitem{Winter 2012}{\emph{Bachelor's project: MagLev – Object Persistence with Ruby and Smalltalk}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape\\Evaluation: 1.0}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.0}
 % \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.0}
 % \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.0}
-\cvitem{}{\emph{Software-Architektur}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Dr. Michael Perscheid, Marcel Taeumel, Tim Felgentreff}
-\cvitem{}{\emph{Modulsysteme}}
-\vspace{-0.7em}\cvitem{}{\small Prof. Dr. Robert Hirschfeld, Bastian Steinert, Marcel Taeumel, Tim Felgentreff}
-\vspace{-0.7em}\cvitem{}{\small Evaluation: 1.2}
+\cvmultilineitem{}{\emph{Software-Architektur}}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Dr. Michael Perscheid, Marcel Taeumel, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Modulsysteme}}{\small Prof. Dr. Robert Hirschfeld, Bastian Steinert, Marcel Taeumel, Tim Felgentreff\\Evaluation: 1.2}
 % \cvlistdoubleitem{showed respect for the students: 1.2}{imparted knowledge: 1.3}
 % \cvlistdoubleitem{addressed questions and proposals: 1.1}{seemed to be well prepared: 1.2}
 % \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.3}
@@ -446,9 +397,9 @@ respondents was reported. Given below is the average of those averages.
 
 \cvitem{}{}
 
-\cvitem{Free and}{\href{https://github.com/babelsberg}{Babelsberg} -- a family of object-constraint languages}{}{}{}
-\cvitem{Open Source}{\href{https://github.com/HPI-SWA-Lab/RSqueak}{RSqueakVM} -- a research Squeak/Smalltalk VM written in RPython}{}{}{}
-\cvitem{Projects}{\href{https://github.com/graalvm/graalpython}{Python on GraalVM} -- an implementation of Python 3 for the GraalVM}{}{}{}
+\cvitem{Projects}{\href{https://github.com/babelsberg}{Babelsberg} -- a family of object-constraint languages}{}{}{}
+\cvitem{}{\href{https://github.com/HPI-SWA-Lab/RSqueak}{RSqueakVM} -- a research Squeak/Smalltalk VM written in RPython}{}{}{}
+\cvitem{}{\href{https://github.com/graalvm/graalpython}{Python on GraalVM} -- an implementation of Python 3 for the GraalVM}{}{}{}
 \cvitem{}{\href{https://github.com/hpi-swa/trufflesqueak}{TruffleSqueak} -- a research Squeak/Smalltalk VM on the GraalVM}{}{}{}
 \cvitem{}{\href{http://squeak.org}{Squeak} -- a modern implementation of Smalltalk-80}{}{}{}
 \cvitem{}{\href{https://github.com/jruby}{JRuby} -- an industry-grade Ruby implementation on the JVM}{}{}{}
