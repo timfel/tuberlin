@@ -33,9 +33,12 @@
 
 \usepackage{pdfpages}
 
+\usepackage{ragged2e}
+
 \usepackage[backend=biber,style=apa,autocite=inline]{biblatex}
 \DeclareLanguageMapping{english}{english-apa}
-\addbibresource{cv.bib}
+\addbibresource[label=cv]{cv.bib}
+\addbibresource[label=plan]{plan.bib}
 
 \newcommand*{\cvmultilineitem}[3]{%
   \cvitem{#1}{#2%
@@ -170,6 +173,8 @@ research and teaching proposals I have attached below.
 %	EDUCATION SECTION
 % ----------------------------------------------------------------------------------------
 
+\justify
+
 I am a member of the GraalVM team at Oracle Labs. I was led here by my interests
 in programming languages and virtual machine design, and my involvement with the
 PyPy/RPython project and various other dynamic language VMs. My work revolves
@@ -225,7 +230,9 @@ tools and environments for dynamic languagues and polyglot programming.
 
 \section{Experience}
 
-\cventry{since 2017}{Senior Software Engineer}{Oracle Labs}{Potsdam}{Germany}{}
+\cventry{since 2020}{Principal Researcher}{Oracle Labs}{Potsdam}{Germany}{}
+
+\cventry{2017--2020}{Senior Software Engineer}{Oracle Labs}{Potsdam}{Germany}{}
 
 \cvitem{}{At Oracle Labs I am a member of the Truffle/Graal group working on
   virtual machine technology for dynamic languages. I am the team lead for the
@@ -468,14 +475,16 @@ those averages.
 \section{Publications}
 \label{sec:publications}
 
-\nocite{*}
+\begin{refsection}[cv]
+  \nocite{*}
 
-\printbibliography[keyword=journal,heading=subbibliography,title=Journals]
-\printbibliography[keyword=conference,heading=subbibliography,title=Conferences]
-\printbibliography[keyword=symposium,heading=subbibliography,title=Symposia]
-\printbibliography[keyword=workshop,heading=subbibliography,title=Workshops]
-\printbibliography[keyword=techreport,heading=subbibliography,title=Technical Reports]
-\printbibliography[keyword=thesis,heading=subbibliography,title=Thesis]
+  \printbibliography[keyword=journal,heading=subbibliography,title=Journals]
+  \printbibliography[keyword=conference,heading=subbibliography,title=Conferences]
+  \printbibliography[keyword=symposium,heading=subbibliography,title=Symposia]
+  \printbibliography[keyword=workshop,heading=subbibliography,title=Workshops]
+  \printbibliography[keyword=techreport,heading=subbibliography,title=Technical Reports]
+  \printbibliography[keyword=thesis,heading=subbibliography,title=Thesis]  
+\end{refsection}
 
 % ----------------------------------------------------------------------------------------
 
@@ -483,6 +492,7 @@ those averages.
 
 \section{Research Plan}
 \label{sec:research}
+\begin{refsection}[plan]
 
 Heterogenous computing hardware has become more widespread and affordable in
 recent years. At the same time, end-user programmers and data scientists with
@@ -503,10 +513,10 @@ R. Even so, the need to balance the needs of the browser environment in which
 JavaScript is often used with the needs for a high-performance data processing
 language require trade-offs between warmup time and peak
 performance. Furthermore, the optimizations applied by optimizing virtual
-machines for JavaScript, Python, and other dynamic languages are still focused
-on making single-threaded execution on the CPU as fast as possible. Making use
-of auxiliary compute hardware is left to libraries and thus, ultimately, to the
-user of these languages.
+machines for JavaScript, Python, and other dynamic languages are still mostly
+focused on making single-threaded execution on the CPU as fast as
+possible. Making use of auxiliary compute hardware is left to libraries and
+thus, ultimately, to the user of these languages.
 
 As the typical size of problems for data scientists and end user programmers
 grows and these groups have access to increasingly affordable GPU and FPGA
@@ -516,11 +526,13 @@ goal in three areas:
 \begin{description}
 \item[Automatic Parallelization and Offloading] I want to continue research upon
   the state of the art to identify and optimize high level patterns and control
-  flow in languages to make use of auxiliary compute hardware. Work done on loop
-  fusion and lazy evaluation [Weld], Columnar objects [Mattis], storage
-  strategies [Gulenko], Megaguards [Qunaibit], and library-specific
-  optimizations such as Numba or CuPy offer promising starting points for
-  higher-level optimization techniques.
+  flow in languages to make use of auxiliary compute hardware. Work done by
+  \cite{palkar2017weld} on loop fusion and lazy evaluation, by
+  \cite{mattis2015columnar} on columnar objects, \cite{pape2015language} on
+  storage strategies, \cite{qunaibit2018accelerating} on mega-guards, and
+  library-specific optimizations such as Numba by \cite{lam2015numba} or CuPy by
+  \cite{nishino2017cupy} offer promising starting points for higher-level
+  optimization techniques.
 
   Using runtime feedback in our Python implementation on GraalVM, for example,
   we have found that we can vectorize Python-level loops. Building upon that, we
@@ -532,31 +544,38 @@ goal in three areas:
   to let the compiler learn the behavior and performance properties of hardware
   to improve optimizations heuristics.
 \item[Declarative Programming and Data Transformations] Declarative programming
-  techniques such as logic and constraint programming [Babelsberg, Squander,
-  Kaplan] as well as reactive programming [Ramson, Salvaneschi] offer the chance
-  for programmers to express intent. Rather than describing how to transform and
-  process data, desired outcomes and invariants can be set for the system. The
-  optimal choice of algorithm can thus be a runtime decision based on the
-  observed system behavior, available hardware, and input data.
+  techniques provide opportunities for other high-level
+  optimizations. \cite{koksal2012constraints, milicevic2011unifying} and my own
+  work on Babelsberg are recent examples for integrating constraints into
+  imperative languages. \cite{drechsler2014distributed} and
+  \cite{DBLP:journals/corr/RamsonH17} are examples of another popular
+  declarative approach--reactive programming--integrated with imperative
+  languages. Rather than describing how to collect, transform, and process data,
+  desired outcomes, invariants, and important changes can be set for the
+  system. The optimal choice of algorithm can thus be a runtime decision based
+  on the observed system behavior, available hardware, and input data.
 
   This can allow optimizing compilers to produce code more flexibly than for
-  imperative programming techniques where the algorithm to find the solution is
-  dictated in the code. I plan to continue to work on such programming language
-  features to make languages more expressive and allow for better optimization
-  at the same time.
+  purely imperative programming techniques where the algorithm to find the
+  solution is dictated in the code. I plan to continue to work on such
+  programming language features to make languages more expressive and allow for
+  better optimization at the same time.
 \item[Multi-language Optimization and Tooling] Popular scripting languages do
   not allow all programming paradigms to exist equally. Additionally, libraries
   of interest to users or with specific features may not be available for all
   languages. The increasingly common notebook-style development environments can
   be a starting point for combining multiple different languages in a convenient
-  way, as we have demonstrated in our recent collaboration between Oracle Labs
-  and the HPI.
+  way, as \cite{DBLP:journals/programming/NiephausFPHT18} have demonstrated in
+  our recent collaborations between Oracle Labs and the HPI.
 
   I plan to conduct further research into polyglot programming tools and
   environments, as well as the optimization across language boundaries. This may
   help programmers be able to choose the proper abstractions in different parts
   of their code without having to sacrifice performance or tooling.
 \end{description}
+
+\printbibliography[prefixnumbers=P,resetnumbers,heading=none]
+\end{refsection}
 
 \clearpage
 
