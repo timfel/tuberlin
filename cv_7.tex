@@ -35,7 +35,7 @@
 
 \usepackage{ragged2e}
 
-\usepackage[backend=biber,style=apa,autocite=inline]{biblatex}
+\usepackage[backend=biber,style=apa,autocite=inline,sorting=ydnt]{biblatex}
 \DeclareLanguageMapping{english}{english-apa}
 \addbibresource[label=cv]{cv.bib}
 \addbibresource[label=plan]{plan.bib}
@@ -83,7 +83,10 @@
   Dekan der Fakultät IV, Sekr. MAR 6-1\\
   Marchstr. 23, 10587 Berlin} % Letter recipient
 \date{\today} % Letter date
-\opening{\textbf{Kennziffer}: IV-427/20\\\vspace{2\parskip} Dear Sir or Madam,} % Opening greeting
+\opening{Application for Professorship in the field of ``Programming
+  Languages''\\
+  \textbf{Kennziffer}: IV-427/20\\
+  \vspace{2\parskip} Dear Sir or Madam,} % Opening greeting
 \closing{Best regards,} % Closing phrase
 \enclosure[Attachments]{
   \begin{minipage}[t]{0.8\linewidth}
@@ -100,35 +103,43 @@
 
 \makelettertitle % Print letter title
 
-I am writing to you to apply for the University Professorship for the field of
-``Programming Languages'' that you published on August 15, 2020.
+I am a researcher in in the areas of programming language optimization, building
+tools and environments for dynamic languages, and I have become familiar with
+the data science research around the Python and R languages, both in terms of
+optimizations and end-user programming requirements. During my PhD and
+post-doctoral positions at the Hasso Plattner Institute I have also worked in
+programming language design and semantics. I have teaching experience from the
+supervision of multiple bachelor's and master's theses, I have assisted with the
+guidance of multiple other PhD students and I have created and conducted
+multiple new lectures at our chair. Because of this experience I am writing to
+apply for the University Professorship for the field of ``Programming
+Languages'' that you published on August 15, 2020.
 
 After my dissertation I joined Oracle Labs for the research opportunities it
 provided in areas that I am interested in: virtual machine optimizations,
-language design, and programming tools. I would be glad for the opportunity to
-continue research in these areas--but with a broader scope--as well as teach
-these and related topics.
+language design, and programming tools. During my time at Oracle I started a new
+Python implementation based on the Truffle AST optimization framework. Over the
+course of three years I became a team lead to 7 other research engineers working
+on this implementation. I am also the principle investigator on the Oracle side
+for multiple research grants given to the Hasso Plattner Institute and the
+University of Cape Town. With the former I work on design patterns and tool
+support for polyglot programs and with the latter I collaborate on a new design
+for a Python C extension API more amenable to JIT optimizations. All projects
+have already yielded results that have been included into the GraalVM
+codebase. I have also continued to co-author papers as part of these research
+collaborations, present at conferences, serve on conference and workshop
+committees, and teach at the Hasso Plattner Institute on topics related to my
+work at Oracle Labs.
 
-During my time at Oracle I started a new Python implementation based on the
-Truffle AST optimization framework. Over the course of three years I became a
-team lead to 7 other research engineers working on this implementation. I am
-also the principle investigator on the Oracle side for multiple research grants
-given to the Hasso Plattner Institute and the University of Cape Town. With the
-former I work on design patterns and tool support for polyglot programs and with
-the latter I collaborate on a new design for a Python C extension API more
-amenable to JIT optimizations. All projects have already yielded results that
-have been included into the GraalVM codebase. I have also continued to co-author
-papers as part of these research collaborations, present at conferences, serve
-on conference and workshop committees, and teach at the Hasso Plattner Institute
-on topics related to my work at Oracle Labs.
-
-Given the opportunity to work at the university I expect to be able to continue
-to collaborate with and acquire funding from Oracle Labs as well as other
-industry partners. I expect that the research I would be conducting at the
-university would continue to be of interest industry research groups, as it was
-when I was a PhD and Post-Doc. I also believe that students can benefit from
-these connections to industry: not only for the varied internship opportunities,
-but also (in my experience) as a motivating factor for practical course work.
+I would be glad for the opportunity to continue research in these areas--but
+with a broader scope--as well as teach these and related topics. I expect to be
+able to continue to collaborate with and acquire funding from Oracle Labs as
+well as other industry partners. I believe that the research I would be
+conducting would continue to be of interest to industry research groups, as it
+was when I was a PhD and post-doctoral researcher. I also believe that students
+can benefit from these connections to industry: not only for the varied
+internship opportunities, but also (in my experience) as a motivating factor for
+practical course work.
 
 I would be glad to hear from you and for a chance to further discuss the
 research and teaching proposals I have attached below.
@@ -175,11 +186,11 @@ research and teaching proposals I have attached below.
 
 \justify
 
-I am a member of the GraalVM team at Oracle Labs. I was led here by my interests
-in programming languages and virtual machine design, and my involvement with the
-PyPy/RPython project and various other dynamic language VMs. My work revolves
-around dynamic language interoperability, connecting them with native C code in
-a safe manner, and providing cross-language tool support. I also continue to
+I am a member of the GraalVM team at Oracle Labs. Starting in my second bachelor
+year I have begun creating interpreters and contributed to various optimizing
+virtual machines for Ruby, Python, and Smalltalk. My work revolves around
+dynamic language interoperability, connecting them with native C code in a safe
+manner, and providing cross-language tool support. I also continue to
 collaborate with the Hasso Plattner Institute at the University of Potsdam on
 tools and environments for dynamic languagues and polyglot programming.
 
@@ -218,11 +229,11 @@ tools and environments for dynamic languagues and polyglot programming.
 
 \cvitem{Thesis}{Post-mortem Analysis of Debug Traces}
 
-\cventry{2005--2007}{Abitur}{Pückler Grammar School}{Cottbus}{Germany}{Grade: 1.0 (A+)}
+% \cventry{2005--2007}{Abitur}{Pückler Grammar School}{Cottbus}{Germany}{Grade: 1.0 (A+)}
 
-\cventry{2004--2005}{AS-level studies}{Budehaven Community College}{Bude}{England}{}
+% \cventry{2004--2005}{AS-level studies}{Budehaven Community College}{Bude}{England}{}
 
-\cventry{2000--2004}{GCSE-level studies}{Heinrich Heine Grammar School}{Cottbus}{Germany}{}
+% \cventry{2000--2004}{GCSE-level studies}{Heinrich Heine Grammar School}{Cottbus}{Germany}{}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
@@ -277,200 +288,328 @@ tools and environments for dynamic languagues and polyglot programming.
 \cvitem{}{At VMware I was working on the MagLev Ruby VM built on top of the
   distributed GemStone/S Smalltalk object database system.}
 
-\cventry{2010}{Ruby Summer of Code}{}{}{}{}
+% \cventry{2010}{Ruby Summer of Code}{}{}{}{}
 
-\cvitem{}{As part of the 2010 Ruby Summer of Code, I added support for Ruby C
-  extensions to JRuby by emulating the CRuby extension interface using Java and
-  JNI}
+% \cvitem{}{As part of the 2010 Ruby Summer of Code, I added support for Ruby C
+%   extensions to JRuby by emulating the CRuby extension interface using Java and
+%   JNI.}
 
 \section{Teaching}
 \label{sec:past-teaching}
 
-Where available, evaluation data from students is given. The evaluation data was
-only made available to the lecturers if enough students gave their score to
-ensure a reasonable level of anonymity for the students. The evaluation included
-ranking from 1 (best) to 5 (worst) on a number of questions specific to each
-lecturer. Questions included ``showed respect for the students'', ``imparted
-knowledge'', ``had a pleasant way of presenting'', or ``was available even
-outside the course'' and more. For each question, the average across all
-respondents was reported. Where available, I have given below the average of
-those averages.
+{\footnotesize (Where available, evaluation data from students is given. The
+  evaluation data was only made available to the lecturers if enough students
+  gave their score to ensure a reasonable level of anonymity for the
+  students. The evaluation included ranking from 1 (best) to 5 (worst) on a
+  number of questions specific to each lecturer. Questions included ``showed
+  respect for the students'', ``imparted knowledge'', ``had a pleasant way of
+  presenting'', or ``was available even outside the course'' and more. For each
+  question, the average across all respondents was reported. Where available, I
+  have given below the average of those averages.)}
 
-\cvitem{}{}
+\subsection{Lectures and Seminars}
+
+\cvmultilineitem{Summer 2020}{\emph{Polyglot Programming}}{
+  Prof. Dr. Robert Hirschfeld, Fabio Niephaus, Dr. Tim Felgentreff (ext)\\
+  \emph{optional seminar, Master, supervised student projects}}
 
 \cvmultilineitem{Summer 2019}{\emph{Virtuelle Ausführungsumgebungen}}{
   Prof. Dr. Robert Hirschfeld, Tobias Pape, Fabio Niephaus, Dr. Tim Felgentreff (ext)\\
+  \emph{optional lecture, Master, created slides and supervised student projects}\\
   Evaluation: 1.29}
 % \cvlistdoubleitem{showed respect for the students: 1.2}{imparted knowledge: 1.0}
 % \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.5}
 % \cvlistdoubleitem{had a pleasant way of presenting: 1.3}{had a comfortable pace: 1.7}
-\cvmultilineitem{Summer 2018}{\emph{Master's Thesis: Daniel Stople - Graal-LSP: A Language Server Implementation with Polyglot Support for the GraalVM}}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff (ext)}
 
-\cvmultilineitem{Summer 2017}{\emph{Master's Thesis: Fabio Niephaus - Squimera: A live, Smalltalk-based IDE for Scripting Languages}}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff}
-\cvmultilineitem{}{\emph{Master's Thesis: Bastian Kruck - Crossing Abstraction Barriers When Debugging Code Transformations: Live Debugging With Compilers}}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff}
-\cvmultilineitem{}{\emph{Softwaretechnik I}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Tobias Pape, Patrick Rein, Marcel Taeumel, Toni Mattis, Stefan Ramson, Dr. Tim Felgentreff}
+\cvmultilineitem{}{\emph{Polyglot Programming}}{
+  Prof. Dr. Robert Hirschfeld, Fabio Niephaus, Dr. Tim Felgentreff (ext)\\
+  \emph{optional seminar, Master, supervised student projects}}
 
-\cvmultilineitem{Winter 2016}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Patrick Rein, Dr. Jens Lincke, Dr. Michael Perscheid, Tim Felgentreff, Stefan Ramson}
-\cvmultilineitem{}{\emph{Live Programming Systems}}{\small Prof. Dr. Robert Hirschfeld, Stefan Ramson, Tim Felgentreff, Patrick Rein}
-\cvmultilineitem{}{\emph{Software Design}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Stefan Ramson, Tim Felgentreff}
-\cvmultilineitem{}{\emph{Virtual Machines and Execution Environments}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Tim Felgentreff}
-\cvmultilineitem{}{\href{https://open.hpi.de/courses/etoys2016}{openHPI Online Course}: "Zusammenhänge entdecken, Phänomene verstehen: Programmieren mit Etoys"}{\small Tim Felgentreff}
+\cvmultilineitem{Summer 2018}{\emph{Virtuelle Ausführungsumgebungen}}{
+  Prof. Dr. Robert Hirschfeld, Tobias Pape, Fabio Niephaus, Dr. Tim Felgentreff (ext)\\
+  \emph{optional lecture, Master, created slides and supervised student projects}\\
+  Evaluation: 1.29}
+% \cvlistdoubleitem{showed respect for the students: 1.2}{imparted knowledge: 1.0}
+% \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.5}
+% \cvlistdoubleitem{had a pleasant way of presenting: 1.3}{had a comfortable pace: 1.7}
 
-\cvmultilineitem{Summer 2016}{\emph{Softwaretechnik I}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Patrick Rein, Marcel Taeumel, Dr. Jens Lincke, Stefan Ramson, Toni Mattis, Tim Felgentreff, Dr. Michael Perscheid}
-\cvmultilineitem{}{\emph{End-user Programming}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Patrick Rein, Marcel Taeumel\\Evaluation: 1.32}
+\cvmultilineitem{Summer 2017}{\emph{Softwaretechnik I}}{
+  \small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Tobias Pape, Patrick Rein, Marcel Taeumel, Toni Mattis, Stefan Ramson, Dr. Tim Felgentreff\\
+  \emph{mandatory lecture, Bachelor, supervised student projects, gave a lecture}}
+
+\cvmultilineitem{Winter 2016}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Patrick Rein, Dr. Jens Lincke, Dr. Michael Perscheid, Tim Felgentreff, Stefan Ramson\\
+  \emph{mandatory lecture, Bachelor, supervised student projects}}
+\cvmultilineitem{}{\emph{Live Programming Systems}}{\small Prof. Dr. Robert Hirschfeld, Stefan Ramson, Tim Felgentreff, Patrick Rein\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Software Design}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Stefan Ramson, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Virtual Machines and Execution Environments}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\href{https://open.hpi.de/courses/etoys2016}{openHPI Online Course}: "Zusammenhänge entdecken, Phänomene verstehen: Programmieren mit Etoys"}{\small Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}}
+
+\cvmultilineitem{Summer 2016}{\emph{Softwaretechnik I}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Patrick Rein, Marcel Taeumel, Dr. Jens Lincke, Stefan Ramson, Toni Mattis, Tim Felgentreff, Dr. Michael Perscheid\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{End-user Programming}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Patrick Rein, Marcel Taeumel\\
+  \emph{optional seminar, Master, attended student projects}\\Evaluation: 1.32}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.6}
 % \cvlistdoubleitem{addressed questions and proposals: 1.3}{seemed to be well prepared: 1.8}
 % \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.2}
-\cvmultilineitem{}{\emph{Virtual Machines}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Tim Felgentreff\\Evaluation: 1.17}
+\cvmultilineitem{}{\emph{Virtual Machines}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}\\Evaluation: 1.17}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.2}
 % \cvlistdoubleitem{addressed questions and proposals: 1.2}{seemed to be well prepared: 1.2}
 % \cvlistdoubleitem{was available outside the course: 1.2}{actively supported me/my team: 1.2}
-\cvmultilineitem{}{\emph{Web-based Development Environments}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Stefan Ramson, Patrick Rein, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Web-based Development Environments}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Stefan Ramson, Patrick Rein, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}}
 
-\cvmultilineitem{Winter 2015}{\emph{Bachelor's Project: Improving Hosted Continuous Integration Services}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Dr. Jens Lincke\\Evaluation: 1.0}
-% \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.0}
-% \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.0}
-% \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.0}
-\cvmultilineitem{}{\emph{Einführung in die Programmiertechnik I}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Toni Mattis, Tim Felgentreff, Marcel Taeumel, Dr. Jens Lincke, Stefan Ramson}
-\cvmultilineitem{}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Patrick Rein, Dr. Jens Lincke, Tim Felgentreff, Dr. Michael Perscheid, Stefan Ramson}
-\cvmultilineitem{}{\emph{Programmiersprachen: Konzepte, Werkzeuge und Umgebungen}}{\small Prof. Dr. Robert Hirschfeld, Patrick Rein, Tim Felgentreff, Marcel Taeumel, Toni Mattis}
-\cvmultilineitem{}{\emph{Software Design}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Tim Felgentreff, Stefan Ramson}
+\cvmultilineitem{Winter 2015}{\emph{Einführung in die Programmiertechnik I}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Toni Mattis, Tim Felgentreff, Marcel Taeumel, Dr. Jens Lincke, Stefan Ramson\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Patrick Rein, Dr. Jens Lincke, Tim Felgentreff, Dr. Michael Perscheid, Stefan Ramson\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Programmiersprachen: Konzepte, Werkzeuge und Umgebungen}}{\small Prof. Dr. Robert Hirschfeld, Patrick Rein, Tim Felgentreff, Marcel Taeumel, Toni Mattis\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Software Design}}{\small Prof. Dr. Robert Hirschfeld, Dr. Jens Lincke, Tim Felgentreff, Stefan Ramson\\
+  \emph{optional seminar, Master, attended student projects}}
 
-\cvmultilineitem{Summer 2015}{\emph{Constraint-basierte Programmierung}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke\\Evaluation: 1.38}
+\cvmultilineitem{Summer 2015}{\emph{Constraint-basierte Programmierung}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke\\
+  \emph{optional seminar, Master, attended student projects}\\Evaluation: 1.38}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.2}
 % \cvlistdoubleitem{addressed questions and proposals: 1.2}{seemed to be well prepared: 1.9}
 % \cvlistdoubleitem{was available outside the course: 1.2}{actively supported me/my team: 1.1}
 % \cvlistdoubleitem{conducted the seminar in an interesting way: 1.8}{created a good structure of the seminar: 1.6}
-\cvmultilineitem{}{\emph{Master's Project: Spur to go faster: Low-level Functionality in a High-Level Language}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape, Marcel Taeumel\\Evaluation: 1.1}
+\cvmultilineitem{}{\emph{Master's Project: Spur to go faster: Low-level Functionality in a High-Level Language}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape, Marcel Taeumel\\
+  \emph{optional seminar, Master, attended student projects}\\Evaluation: 1.1}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.0}
 % \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.3}
 % \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.3}
-\cvmultilineitem{}{\emph{Master's Thesis: Stefan Lehmann - Scoping Constraints and Reactive Behavior: Towards a Practical Object Constraint Programming Tool}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
 
-\cvmultilineitem{Winter 2014}{\emph{Master's Thesis: Maria Graber - Specifying and Solving Logic Puzzles with Babelsberg/S}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
-\cvmultilineitem{}{\emph{Master's Thesis: Anton Gulenko - Allocation Removal in Modern Object Oriented VMs}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
-\cvmultilineitem{}{\emph{Bachelor's Project: Example-driven Exploration in Dynamically-typed Programming Environments}}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Jens Lincke, Tim Felgentreff}
-\cvmultilineitem{}{\emph{Ausgewählte Programmiersprachkonzepte}}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Tobias Pape, Tim Felgentreff}
-\cvmultilineitem{}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Dr. Michael Perscheid, Jens Lincke, Tim Felgentreff}
-\cvmultilineitem{}{\emph{Kontextorientiertes Programmieren}}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Marcel Taeumel, Tobias Pape, Tim Felgentreff}
-\cvmultilineitem{}{\emph{Modulsysteme}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke, Marcel Taeumel, Tobias Pape}
-\cvmultilineitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape\\Evaluation: 1.36}
+\cvmultilineitem{Winter 2014}{\emph{Ausgewählte Programmiersprachkonzepte}}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Tobias Pape, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Tobias Pape, Marcel Taeumel, Dr. Michael Perscheid, Jens Lincke, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Kontextorientiertes Programmieren}}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Marcel Taeumel, Tobias Pape, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Modulsysteme}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke, Marcel Taeumel, Tobias Pape\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape\\
+  \emph{optional seminar, Master, attended student projects}\\Evaluation: 1.36}
 % \cvlistdoubleitem{showed respect for the students: 1.1}{imparted knowledge: 1.0}
 % \cvlistdoubleitem{addressed questions and proposals: 1.2}{seemed to be well prepared: 1.8}
 % \cvlistdoubleitem{was available outside the course: 1.5}{actively supported me/my team: 1.5}
 % \cvlistdoubleitem{conducted the seminar in an interesting way: 1.4}{created a good structure of the seminar: 1.4}
 
-\cvmultilineitem{Summer 2014}{\emph{Master's Thesis: Philipp Tessenow - Extending a Dynamic Programming Language and Runtime Environment with Access Control}}{\small Prof. Dr. Robert Hirschfeld, Gilad Bracha (ext), Tim Felgentreff}
-\cvmultilineitem{}{\emph{Master's Project: Software Transactional Memory for RSqueak/VM}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape}
-\cvmultilineitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape}
-\cvmultilineitem{}{\emph{Constraint-basierte Programmierung}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff\\Evaluation: 1.2}
+\cvmultilineitem{Summer 2014}{\emph{Master's Project: Software Transactional Memory for RSqueak/VM}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Constraint-basierte Programmierung}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}\\Evaluation: 1.2}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.3}
 % \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.0}
 % \cvlistdoubleitem{was available outside the course: 1.1}{actively supported me/my team: 1.4}
 % \cvlistdoubleitem{conducted the seminar in an interesting way: 1.3}{created a good structure of the seminar: 1.5}
 
-\cvmultilineitem{Winter 2013}{\emph{Master's Thesis: Lars Wassermann - Tracing Algorithmic Primitives in R/SqueakVM}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
-\cvmultilineitem{}{\emph{Bachelor's Project: ecoControl: Entwurf und Implementierung einer Software zur Optimierung heterogener Energiesysteme in Mehrfamilienhäusern}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke, Marcel Taeumel}
-\cvmultilineitem{}{\emph{Einführung in die Programmiertechnik I}}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Tim Felgentreff, Tobias Pape}
-\cvmultilineitem{}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Prof. Dr. Robert Hirschfeld, Bastian Steinert, Marcel Taeumel, Tim Felgentreff, Tobias Pape}
-\cvmultilineitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}{\small Prof. Dr. Robert Hirschfeld, Bastian Steinert, Tim Felgentreff, Tobias Pape\\Evaluation: 1.06}
+\cvmultilineitem{Winter 2013}{\emph{Einführung in die Programmiertechnik I}}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Tim Felgentreff, Tobias Pape\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Softwarearchitektur}}{\small Prof. Dr. Robert Hirschfeld, Prof. Dr. Robert Hirschfeld, Bastian Steinert, Marcel Taeumel, Tim Felgentreff, Tobias Pape\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Virtuelle Maschinen und Ausführungsumgebungen}}{\small Prof. Dr. Robert Hirschfeld, Bastian Steinert, Tim Felgentreff, Tobias Pape\\
+  \emph{optional seminar, Master, attended student projects}\\Evaluation: 1.06}
 % \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.0}
 % \cvlistdoubleitem{addressed questions and proposals: 1.1}{seemed to be well prepared: 1.0}
 % \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.2}
 % \cvlistdoubleitem{conducted the seminar in an interesting way: 1.1}{}
 
-\cvmultilineitem{Summer 2013}{\emph{Interactive Representations of Data Structures and Algorithms}}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Marcel Taeumel, Tim Felgentreff}
+\cvmultilineitem{Summer 2013}{\emph{Interactive Representations of Data Structures and Algorithms}}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Marcel Taeumel, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}}
 
-\cvmultilineitem{Winter 2012}{\emph{Bachelor's project: MagLev – Object Persistence with Ruby and Smalltalk}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape\\Evaluation: 1.0}
-% \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.0}
-% \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.0}
-% \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.0}
-\cvmultilineitem{}{\emph{Software-Architektur}}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Dr. Michael Perscheid, Marcel Taeumel, Tim Felgentreff}
-\cvmultilineitem{}{\emph{Modulsysteme}}{\small Prof. Dr. Robert Hirschfeld, Bastian Steinert, Marcel Taeumel, Tim Felgentreff\\Evaluation: 1.2}
+\cvmultilineitem{Winter 2012}{\emph{Software-Architektur}}{\small Prof. Dr. Robert Hirschfeld, Jens Lincke, Dr. Michael Perscheid, Marcel Taeumel, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}}
+\cvmultilineitem{}{\emph{Modulsysteme}}{\small Prof. Dr. Robert Hirschfeld, Bastian Steinert, Marcel Taeumel, Tim Felgentreff\\
+  \emph{optional seminar, Master, attended student projects}\\Evaluation: 1.2}
 % \cvlistdoubleitem{showed respect for the students: 1.2}{imparted knowledge: 1.3}
 % \cvlistdoubleitem{addressed questions and proposals: 1.1}{seemed to be well prepared: 1.2}
 % \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.3}
 % \cvlistdoubleitem{conducted the seminar in an interesting way: 1.3}{}
 
+\subsection{Master Theses Supervision}
+
+\cvmultilineitem{2017/2018}{\emph{Master's Thesis: Daniel Stople - Graal-LSP: A Language Server Implementation with Polyglot Support for the GraalVM}}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff (ext)}
+
+\cvmultilineitem{2016/2017}{\emph{Master's Thesis: Fabio Niephaus - Squimera: A live, Smalltalk-based IDE for Scripting Languages}}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff}
+\cvmultilineitem{}{\emph{Master's Thesis: Bastian Kruck - Crossing Abstraction Barriers When Debugging Code Transformations: Live Debugging With Compilers}}{\small Prof. Dr. Robert Hirschfeld, Dr. Tim Felgentreff}
+
+\cvmultilineitem{2014/2015}{\emph{Master's Thesis: Stefan Lehmann - Scoping Constraints and Reactive Behavior: Towards a Practical Object Constraint Programming Tool}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
+
+\cvmultilineitem{2013/2014}{\emph{Master's Thesis: Maria Graber - Specifying and Solving Logic Puzzles with Babelsberg/S}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
+\cvmultilineitem{}{\emph{Master's Thesis: Anton Gulenko - Allocation Removal in Modern Object Oriented VMs}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
+
+\cvmultilineitem{2013/2014}{\emph{Master's Thesis: Philipp Tessenow - Extending a Dynamic Programming Language and Runtime Environment with Access Control}}{\small Prof. Dr. Robert Hirschfeld, Gilad Bracha (ext), Tim Felgentreff}
+
+\cvmultilineitem{2012/2013}{\emph{Master's Thesis: Lars Wassermann - Tracing Algorithmic Primitives in R/SqueakVM}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff}
+
+\subsection{Bachelor Theses Supervision}
+
+\cvmultilineitem{2015/2016}{\emph{Bachelor's Project: Improving Hosted Continuous Integration Services}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Dr. Jens Lincke\\Evaluation: 1.0}
+% \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.0}
+% \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.0}
+% \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.0}
+
+\cvmultilineitem{2014/2015}{\emph{Bachelor's Project: Example-driven Exploration in Dynamically-typed Programming Environments}}{\small Prof. Dr. Robert Hirschfeld, Marcel Taeumel, Jens Lincke, Tim Felgentreff}
+
+\cvmultilineitem{2013/2014}{\emph{Bachelor's Project: ecoControl: Entwurf und Implementierung einer Software zur Optimierung heterogener Energiesysteme in Mehrfamilienhäusern}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Jens Lincke, Marcel Taeumel}
+
+\cvmultilineitem{2012/2013}{\emph{Bachelor's project: MagLev – Object Persistence with Ruby and Smalltalk}}{\small Prof. Dr. Robert Hirschfeld, Tim Felgentreff, Tobias Pape\\Evaluation: 1.0}
+% \cvlistdoubleitem{showed respect for the students: 1.0}{imparted knowledge: 1.0}
+% \cvlistdoubleitem{addressed questions and proposals: 1.0}{seemed to be well prepared: 1.0}
+% \cvlistdoubleitem{was available outside the course: 1.0}{actively supported me/my team: 1.0}
+
+\subsection{Mentoring for PhD Students}
+
+\cvitem{Fabio Niephaus}{During his PhD Fabio continued his research on polyglot
+  programming environments that he started during his master's thesis. After
+  joining Oracle I helped secure funding for his research and continued to
+  provide guidance and co-author papers with him.}
+
+\cvitem{Tobias Pape}{Tobias worked on runtime data structure optimizations
+  during his PhD. I began helping Tobias with focusing his research towards
+  research questions and to structure his thesis after I finished my own
+  dissertation.}
+
+\cvitem{Johannes Henning}{Johannes did research on persistence in programming
+  languages, inspired by Squeak/Smalltalk and SAP's ABAB programming language. I
+  guided him to use RPython and GraalVM and in particular the Squeak VMs, which
+  I started on these platforms as vehicles for his research.}
+
 %----------------------------------------------------------------------------------------
 %	COMPUTER SKILLS SECTION
-%----------------------------------------------------------------------------------------
+% ----------------------------------------------------------------------------------------
+
+\section{Open Source Projects}
+
+\cvitem{\href{https://github.com/babelsberg}{Babelsberg}}{A family of
+  object-constraint languages that I created during my PhD. The implementations
+  explore different implementation (in VM or in language) and optimization
+  strategies (method vs tracing JIT).}{}{}{}
+
+\cvitem{\href{https://github.com/HPI-SWA-Lab/RSqueak}{RSqueakVM}}{A research
+  Squeak/Smalltalk VM written in RPython. Using this VM we implemented a generic
+  storage strategies library that can be used in any VM built on the RPython
+  toolchain.}{}{}{}
+
+\cvitem{\href{https://github.com/graalvm/graalpython}{GraalPython}}{I started
+  this implementation of Python 3 for the GraalVM when I joined Oracle. We
+  explored how to emulate the existing CPython C extension API and sandbox the
+  native extension code for added security. We also used this Python
+  implementation in an Oracle-HPI collaboration to explore language-agnostic
+  support for the language-server protocol used in multiple modern IDEs.}{}{}{}
+
+\cvitem{\href{https://github.com/hpi-swa/trufflesqueak}{TruffleSqueak}}{I
+  created this research Squeak/Smalltalk VM on the GraalVM that decompiled the
+  bytecode format of Squeak images into an AST representation for consumption by
+  the Truffle framework. The VM has since been almost entirely rewritten by
+  Fabio Niephaus during the course of his PhD.}{}{}{}
+
+\cvitem{\href{http://squeak.org}{Squeak}}{I have been a core contributor to this
+  modern implementation of Smalltalk-80, initially contributing updated date and
+  time parsing for HTTP and updated logic for theming the environment.}{}{}{}
+
+\cvitem{\href{https://github.com/jruby}{JRuby}}{An industry-grade Ruby
+  implementation on the JVM. I contributed fast binary packing of numeric types
+  into different machine representations and a C extension API to run CRuby C
+  extensions which were previously unavailable on JRuby.}{}{}{}
+
+\cvitem{\href{https://github.com/topazproject}{Topaz}}{I started this Ruby
+  implementation on RPython together with Alex Gaynor to show that a tracing JIT
+  approach can provide faster warmup and good peak performance for Ruby's most
+  dynamic features than the JRuby implementation that was the fastest at the
+  time.}{}{}{}
+
+\cvitem{\href{https://github.com/maglev}{MagLev}}{A Ruby implementation on top
+  of the GemStone/S object-database. As part of my VMware internship I worked on
+  C extension and continuation support as well as Smalltalk tooling for Ruby
+  source code. After starting my PhD I set up a collaboration with VMware for a
+  bachelors project to update MagLev from Ruby version 1.8 to 1.9.}{}{}{}
+
+\cvitem{\href{https://bitbucket.org/pypy}{PyPy}}{A fast Python implementation
+  with a tracing just-in-time compiler. The RPython toolchain for dynamic
+  languages implementations was factored out of PyPy and here I contributed to
+  the meta-tracing JIT, the debugging experience after translation, and the
+  profiler.}{}{}{}
+
+\cvitem{\href{https://github.com/LivelyKernel}{Lively Kernel}}{Lively is a
+  self-supporting development environment on a Web page. I have been most
+  involved with the fourth instance of Lively Kernel, ``Lively Web''. I explored
+  offline support for the development environment, touch- and pen-based
+  graphical programming, and developed my in-language Babelsberg implementation
+  for JavaScript to use constraints for graphical layouts.}{}{}{}
+
+\cvitem{\href{https://github.com/Wargus}{Stratagus}}{This real-time 2d strategy
+  game engine started in 1998 (first called ALE Clone, later Freecraft). I have
+  taken over ownership of it in 2015 and have been updating it with new features
+  and explored how to add live-programming to this old codebase using
+  Lua.}{}{}{}
 
 \section{Skills}
 
-\cvitem{Languages}{German, Mothertongue}{}{}{}
-\cvitem{}{English, Full professional proficiency}{}{}{}
-\cvitem{}{French, Simple conversations only}{}{}{}
-\cvitem{}{Mandarin, Basic words and phrases only}{}{}{}
+\cvmultilineitem{Languages}{German, Mothertongue}{\normalsize
+{English, Full professional proficiency}{}{}{}
+\\{French, Simple conversations only}{}{}{}
+\\{Mandarin, Basic words and phrases only}{}{}{}}
 
-\cvitem{}{}
+\cvmultilineitem{Hobbies}{I tinker with, do repairs on, and program for old 8 and 16-bit
+  computers.}{\normalsize
+{I run 10 kilometers in less than 50 minutes.}}
 
-\cvitem{Projects}{\href{https://github.com/babelsberg}{Babelsberg} -- a family of object-constraint languages}{}{}{}
-\cvitem{}{\href{https://github.com/HPI-SWA-Lab/RSqueak}{RSqueakVM} -- a research Squeak/Smalltalk VM written in RPython}{}{}{}
-\cvitem{}{\href{https://github.com/graalvm/graalpython}{Python on GraalVM} -- an implementation of Python 3 for the GraalVM}{}{}{}
-\cvitem{}{\href{https://github.com/hpi-swa/trufflesqueak}{TruffleSqueak} -- a research Squeak/Smalltalk VM on the GraalVM}{}{}{}
-\cvitem{}{\href{http://squeak.org}{Squeak} -- a modern implementation of Smalltalk-80}{}{}{}
-\cvitem{}{\href{https://github.com/jruby}{JRuby} -- an industry-grade Ruby implementation on the JVM}{}{}{}
-\cvitem{}{\href{https://github.com/topazproject}{Topaz} -- an experimental Ruby implementation written in RPython}{}{}{}
-\cvitem{}{\href{https://github.com/maglev}{MagLev} -- a Ruby implementation on top of the GemStone/S object-database}{}{}{}
-\cvitem{}{\href{https://bitbucket.org/pypy}{PyPy} -- a fast Python implementation with a tracing just-in-time compiler}{}{}{}
-\cvitem{}{\href{https://github.com/LivelyKernel}{Lively Kernel} -- a self-supporting development environment on a Web page}{}{}{}
-\cvitem{}{\href{https://github.com/Wargus}{Stratagus} -- a real-time 2d strategy game engine}{}{}{}
+\section{Presenting Research to Industry and Public Audiences}
+\cvmultilineitem{Invited Talks}{ESUG 2016 -- ``Presenting Etoys 6''}{\normalsize
+{ESUG 2016 -- ``RSqueak/VM Tutorial''}
+\\{CRAFT 2014 -- ``Babelsberg - Modularizing Constraint Satisfaction in Imperative Programs''}
+\\{Wroclove.rb 2013 -- ``Topaz Ruby''}
+% \\{Workshop on Context-Oriented Programming 2013 -- ``A Tool Building Example: Layers as Source Code Packages''}
+\\{Portland Ruby Brigade, Sep 2011 -- ``Debugging on Steroids - what Ruby should learn from Smalltalk''}
+\\{Ruby User Group, Berlin, Oct 2011 -- ``Building the fastest Ruby yet''}
+\\{RubyConf 2010 -- ``C-extensions for JRuby''}
+\\{JaX 2010 -- ``Versionskontrolle: Zentral oder Verteilt?''}}
 
-\cvitem{}{}
-
-\cvitem{Invited Talks}{ESUG 2016 -- ``Presenting Etoys 6''}
-\cvitem{}{ESUG 2016 -- ``RSqueak/VM Tutorial''}
-\cvitem{}{CRAFT 2014 -- ``Babelsberg - Modularizing Constraint Satisfaction in Imperative Programs''}
-\cvitem{}{Wroclove.rb 2013 -- ``Topaz Ruby''}
-\cvitem{}{Workshop on Context-Oriented Programming 2013 -- ``A Tool Building Example: Layers as Source Code Packages''}
-\cvitem{}{Portland Ruby Brigade, Sep 2011 -- ``Debugging on Steroids - what Ruby should learn from Smalltalk''}
-\cvitem{}{Ruby User Group, Berlin, Oct 2011 -- ``Building the fastest Ruby yet''}
-\cvitem{}{RubyConf 2010 -- ``C-extensions for JRuby''}
-\cvitem{}{JaX 2010 -- ``Versionskontrolle: Zentral oder Verteilt?''}
-
-\cvitem{}{}
-
-\cventry{In the Media}{\mdseries``Programmieren für Kinder''}{}{}{}{rbb ``Brandenburg aktuell'', 4. Jan 2016}
+\cventry{In the Media}{\mdseries``Interview: CI als Standard''}{}{}{}{com! professional, 31. Mar 2017}
+\cventry{}{\mdseries``Programmieren für Kinder''}{}{}{}{rbb ``Brandenburg aktuell'', 4. Jan 2016}
 \cventry{}{\mdseries``Babelsberg - Eine neue Programmiersprache''}{}{}{}{Deutschlandfunk ``Computer und Kommunikation'', 12. Jul 2014}
 \cventry{}{\mdseries``HPI kündigt neue Programmiersprache Babelsberg an''}{}{}{}{Computerwoche, 7. Jul 2014}
 \cventry{}{\mdseries``Neue Programmiersprache heißt Babelsberg''}{}{}{}{Märkische Allgemeine, 5. Jul 2014}
 \cventry{}{\mdseries``HPI stelllt neue Programmiersprache Babelsberg vor''}{}{}{}{Heise, 30. Jun 2014}
 \cventry{}{\mdseries``Der Babelsberg-Code''}{}{}{}{Potsdamer Neueste Nachrichten, 27. Jun 2014}
 
-\cvitem{}{}
-
-\cvitem{Hobbies}{I tinker with, do repairs on, and program for old 8 and 16-bit
-  computers.}
-
-\cvitem{}{I run 10 kilometers in less than 50 minutes.}
-
 \section{Scientific Community Participation}
 
-\cvitem{PC Member}{ECOOP 2020}
-\cvitem{}{Programming Experience Workshop 2020}
-\cvitem{}{Onward! 2019}
-\cvitem{}{Workshop on Reactive and Event-based Languages \& Systems (REBLS) 2016, 2017, 2019}
-\cvitem{}{Implementation, Compilation, Optimization of Object-Oriented Languages, Programs and Systems Workshop 2016, 2017, 2019}
-\cvitem{}{Modularity! Student Research Competition 2016}
-\cvitem{}{Workshop on Dynamic Languages and Applications 2014}
-\cvitem{}{SPLASH Artifact Evaluation Committee 2014}
+\cvitem{SC Chair}{DLS (ACM SIGPLAN | 2019, 2020)}
 
-\cvitem{}{}
-\cvitem{Chair}{Dynamic Languages Symposium 2018, 2019, 2020}
-\cvitem{}{Implementation, Compilation, Optimization of Object-Oriented Languages, Programs and Systems Workshop 2018}
-\cvitem{}{Constrained and Reactive Objects Workshop 2016}
+\cvitem{PC Chair}{DLS (ACM SIGPLAN | 2018)}
 
-\cvitem{}{}
-\cvitem{Reviewer}{ECOOP 2018}
-\cvitem{}{$<$Programming$>$ 2017, 2018}
-\cvitem{}{Programming Experience Workshop 2017}
-\cvitem{}{Workshop on Meta-Programming Techniques and Reflection 2016}
-\cvitem{}{Object-Oriented Programming Languages and Systems @ SAC 2015, 2016}
-\cvitem{}{Dynamic Languages Symposium 2014, 2015, 2016}
-\cvitem{}{GI-IT 2014}
-\cvitem{}{Onward! 2014}
-\cvitem{}{Symposium on Open Collaboration 2014}
+\cvmultilineitem{Organizer}{ICOOOLPS (co-located with ECOOP | 2018)}{\normalsize
+{CROW (co-located with MODULARITY:aosd | 2016)}}
+
+\cvmultilineitem{PC Member}{ECOOP (AITO | 2020)}{\normalsize
+{PX (co-located with <Programming> \& SPLASH | 2020)}
+\\{Onward! (ACM SIGPLAN | 2019)}
+\\{REBLS (co-located with ECOOP | 2016, 2017, 2019)}
+\\{ICOOOLPS (co-located with ECOOP | 2016, 2017, 2019)}
+\\{DyLA (co-located with PLDI | 2014)}}
+
+\cvitem{AEC Member}{SPLASH (ACM SIGPLAN | 2014)}
+
+\cvitem{SRC Member}{MODULARITY:aosd (AOSA | 2016)}
+
+\cvmultilineitem{Reviewer}{ECOOP 2018}{\normalsize
+{<Programming> (AOSA | 2017, 2018)}
+\\{PX (co-located with <Programming> | 2017)}
+\\{META (co-located with SPLASH | 2016)}
+\\{OOPS @ SAC (ACM SIGAPP  | 2015, 2016)}
+\\{DLS (ACM SIGPLAN | 2014, 2015, 2016)}
+\\{GI-IT 2014}
+\\{Onward! (ACM SIGPLAN | 2014)}
+\\{OpenSym (ACM SIGSOFT | 2014)}}
 
 \section{Publications}
 \label{sec:publications}
@@ -480,10 +619,10 @@ those averages.
 
   \printbibliography[keyword=journal,heading=subbibliography,title=Journals]
   \printbibliography[keyword=conference,heading=subbibliography,title=Conferences]
-  \printbibliography[keyword=symposium,heading=subbibliography,title=Symposia]
+  % \printbibliography[keyword=symposium,heading=subbibliography,title=Symposia]
   \printbibliography[keyword=workshop,heading=subbibliography,title=Workshops]
-  \printbibliography[keyword=techreport,heading=subbibliography,title=Technical Reports]
-  \printbibliography[keyword=thesis,heading=subbibliography,title=Thesis]  
+  \printbibliography[keyword=mono,heading=subbibliography,title=Monographs]
+  \printbibliography[keyword=techreport,heading=subbibliography,title=Technical Reports (not peer reviewed)]
 \end{refsection}
 
 % ----------------------------------------------------------------------------------------
@@ -493,88 +632,97 @@ those averages.
 \section{Research Plan}
 \label{sec:research}
 \begin{refsection}[plan]
+  In my studies and work I have gained experience with language design and
+  optimizations as well as tooling for programmers to ease debugging in both
+  local and distributed settings and across language boundaries. Although I do
+  not have a data science background, much of my research at Oracle has focused
+  on making Python's data science and machine learning libraries fast and their
+  execution safe even when these libraries include native C code.
 
-Heterogenous computing hardware has become more widespread and affordable in
-recent years. At the same time, end-user programmers and data scientists with
-little or no formal programming education are increasingly writing programs to
-process large amounts of data. While hardware vendors and the industry and
-research community have demonstrated libraries (such as OpenMP) and languages
-(such as CUDA and OpenCL) to take advantage of new hardware capabilities,
-high-level "scripting" languages such as Python, R, or JavaScript are still popular
-among the scientific computing community. These languages are inherently
-single-threaded and not designed for high-performance computing. Although
-popular libraries such as NumPy, Tensorflow, or scikit-learn work around this
-problem to an extent, in practice the highly optimized code in these packages is
-interleaved with high-level language code and thus inherently bottlenecked.
+  Heterogenous computing hardware has become more widespread and affordable in
+  recent years. At the same time, end-user programmers and data scientists with
+  little or no formal programming education are increasingly writing programs to
+  process large amounts of data. While hardware vendors and the industry and
+  research community have demonstrated libraries (such as OpenMP) and languages
+  (such as CUDA and OpenCL) to take advantage of new hardware capabilities,
+  high-level "scripting" languages such as Python, R, or JavaScript are still
+  popular among the scientific computing community. These languages are
+  inherently single-threaded and not designed for high-performance
+  computing. Although popular libraries such as NumPy, Tensorflow, or
+  scikit-learn work around this problem to an extent, in practice the highly
+  optimized code in these packages is interleaved with high-level language code
+  and thus inherently bottlenecked.
 
-Millions of dollars by Google, Mozilla, Microsoft and others have been poured
-into making JavaScript VMs fast, an effort not expended so far to Python or
-R. Even so, the need to balance the needs of the browser environment in which
-JavaScript is often used with the needs for a high-performance data processing
-language require trade-offs between warmup time and peak
-performance. Furthermore, the optimizations applied by optimizing virtual
-machines for JavaScript, Python, and other dynamic languages are still mostly
-focused on making single-threaded execution on the CPU as fast as
-possible. Making use of auxiliary compute hardware is left to libraries and
-thus, ultimately, to the user of these languages.
+  Big investments were made by Google, Mozilla, Microsoft and others to make
+  JavaScript VMs fast. While a comparable effort has not been expended so far to
+  Python or R, there is interest in the research community and in industry to
+  improve those data science languages as well. But even for JavaScript, the
+  need to balance the needs of the browser environment in which JavaScript is
+  often used with the needs for a high-performance server-side language require
+  trade-offs between warmup time and peak performance. Furthermore, the
+  optimizations applied by state of the art optimizing virtual machines for
+  JavaScript, Python, and other dynamic languages are still mostly focused on
+  making single-threaded execution on the CPU as fast as possible. Making use of
+  auxiliary compute hardware is left to libraries and thus, ultimately, to the
+  user of these languages.
 
-As the typical size of problems for data scientists and end user programmers
-grows and these groups have access to increasingly affordable GPU and FPGA
-hardware, scripting languages and their optimizing virtual machines need to
-improve to provide good performance. I propose to conduct research towards this
-goal in three areas:
-\begin{description}
-\item[Automatic Parallelization and Offloading] I want to continue research upon
-  the state of the art to identify and optimize high level patterns and control
-  flow in languages to make use of auxiliary compute hardware. Work done by
-  \cite{palkar2017weld} on loop fusion and lazy evaluation, by
-  \cite{mattis2015columnar} on columnar objects, \cite{pape2015language} on
-  storage strategies, \cite{qunaibit2018accelerating} on mega-guards, and
-  library-specific optimizations such as Numba by \cite{lam2015numba} or CuPy by
-  \cite{nishino2017cupy} offer promising starting points for higher-level
-  optimization techniques.
+  As the typical size of problems for data scientists and end user programmers
+  grows and these groups have access to increasingly affordable GPU and FPGA
+  hardware, languages and their optimizing compilers need to improve to provide
+  good performance across wider ranges of hardware and data structures than
+  before. I propose to conduct research towards this goal in three main areas:
+  \begin{description}
+  \item[Automatic Parallelization and Offloading] I want to continue research upon
+    the state of the art to identify and optimize high level patterns and control
+    flow in languages to make use of auxiliary compute hardware. Work done by
+    \cite{palkar2017weld} on loop fusion and lazy evaluation, by
+    \cite{mattis2015columnar} on columnar objects, \cite{pape2015language} on
+    storage strategies, \cite{qunaibit2018accelerating} on mega-guards, and
+    library-specific optimizations such as Numba by \cite{lam2015numba} or CuPy by
+    \cite{nishino2017cupy} offer promising starting points for higher-level
+    optimization techniques.
 
-  Using runtime feedback in our Python implementation on GraalVM, for example,
-  we have found that we can vectorize Python-level loops. Building upon that, we
-  should be able to determine when a Python loop runs long enough and over
-  enough data to warrant offloading to a GPU for highly parallel
-  processing. With distributed and multi-tenant systems, available processing
-  hardware, communication overhead, and load are not fixed and under the control
-  of the optimizing compiler. We need to investigate using learning approaches
-  to let the compiler learn the behavior and performance properties of hardware
-  to improve optimizations heuristics.
-\item[Declarative Programming and Data Transformations] Declarative programming
-  techniques provide opportunities for other high-level
-  optimizations. \cite{koksal2012constraints, milicevic2011unifying} and my own
-  work on Babelsberg are recent examples for integrating constraints into
-  imperative languages. \cite{drechsler2014distributed} and
-  \cite{DBLP:journals/corr/RamsonH17} are examples of another popular
-  declarative approach--reactive programming--integrated with imperative
-  languages. Rather than describing how to collect, transform, and process data,
-  desired outcomes, invariants, and important changes can be set for the
-  system. The optimal choice of algorithm can thus be a runtime decision based
-  on the observed system behavior, available hardware, and input data.
+    Using runtime feedback in our Python implementation on GraalVM, for example,
+    we have found that we can vectorize Python-level loops. Building upon that, we
+    should be able to determine when a Python loop runs long enough and over
+    enough data to warrant offloading to a GPU for highly parallel
+    processing. With distributed and multi-tenant systems, available processing
+    hardware, communication overhead, and load are not fixed and under the control
+    of the optimizing compiler. We need to investigate using learning approaches
+    to let the compiler learn the behavior and performance properties of hardware
+    to improve optimizations heuristics.
+  \item[Declarative Programming and Data Transformations] Declarative programming
+    techniques provide opportunities for other high-level
+    optimizations. \cite{koksal2012constraints, milicevic2011unifying} and my own
+    work on Babelsberg are recent examples for integrating constraints into
+    imperative languages. \cite{drechsler2014distributed} and
+    \cite{DBLP:journals/corr/RamsonH17} are examples of another popular
+    declarative approach--reactive programming--integrated with imperative
+    languages. Rather than describing how to collect, transform, and process data,
+    desired outcomes, invariants, and important changes can be set for the
+    system. The optimal choice of algorithm can thus be a runtime decision based
+    on the observed system behavior, available hardware, and input data.
 
-  This can allow optimizing compilers to produce code more flexibly than for
-  purely imperative programming techniques where the algorithm to find the
-  solution is dictated in the code. I plan to continue to work on such
-  programming language features to make languages more expressive and allow for
-  better optimization at the same time.
-\item[Multi-language Optimization and Tooling] Popular scripting languages do
-  not allow all programming paradigms to exist equally. Additionally, libraries
-  of interest to users or with specific features may not be available for all
-  languages. The increasingly common notebook-style development environments can
-  be a starting point for combining multiple different languages in a convenient
-  way, as \cite{DBLP:journals/programming/NiephausFPHT18} have demonstrated in
-  our recent collaborations between Oracle Labs and the HPI.
+    This can allow optimizing compilers to produce code more flexibly than for
+    purely imperative programming techniques where the algorithm to find the
+    solution is dictated in the code. I plan to continue to work on such
+    programming language features to make languages more expressive and allow for
+    better optimization at the same time.
+  \item[Multi-language Optimization and Tooling] Popular scripting languages do
+    not allow all programming paradigms to exist equally. Additionally, libraries
+    of interest to users or with specific features may not be available for all
+    languages. The increasingly common notebook-style development environments can
+    be a starting point for combining multiple different languages in a convenient
+    way, as \cite{DBLP:journals/programming/NiephausFPHT18} have demonstrated in
+    our recent collaborations between Oracle Labs and the HPI.
 
-  I plan to conduct further research into polyglot programming tools and
-  environments, as well as the optimization across language boundaries. This may
-  help programmers be able to choose the proper abstractions in different parts
-  of their code without having to sacrifice performance or tooling.
-\end{description}
+    I plan to conduct further research into polyglot programming tools and
+    environments, as well as the optimization across language boundaries. This may
+    help programmers be able to choose the proper abstractions in different parts
+    of their code without having to sacrifice performance or tooling.
+  \end{description}
 
-\printbibliography[prefixnumbers=P,resetnumbers,heading=none]
+  \printbibliography[prefixnumbers=P,resetnumbers,heading=none]
 \end{refsection}
 
 \clearpage
