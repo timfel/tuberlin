@@ -314,16 +314,18 @@ Town on tools and environments for dynamic languagues and polyglot programming.
   first year students we taught the basic tools of programming: using IDEs and
   build systems, running tests, as well as writing and using basic
   algorithms. We taught using multiple languages, including Java, Prolog,
-  Python, and Scheme. The initial course structure was inspired by the
-  Abelson-Sussman book ``Structure and Interpretation of Computer
-  Programs''.}
+  Python, and Scheme. % The initial course structure was inspired by the
+  % Abelson-Sussman book ``Structure and Interpretation of Computer
+  % Programs''.
+}
 
 \cvmultilineitem{Winter 2013--2016}{\textbf{Softwarearchitektur}}{I prepared and
   gave lectures, supervised and graded student projects.\\\vskip\parskip
   \normalsize In this course for second year students we taught the use of
   language idoms, design patterns, frameworks, and architectural styles that
   help software developers communicate intent and create maintainable
-  software. The course draws from the Gang of Four ``Design Patterns'' book.}
+  software. % The course draws from the Gang of Four ``Design Patterns'' book.
+}
 
 \cvmultilineitem{Summer 2013--2017}{\textbf{Softwaretechnik I}}{I prepared and
   gave lectures, supervised and graded student projects.\\\vskip\parskip
@@ -725,54 +727,47 @@ Town on tools and environments for dynamic languagues and polyglot programming.
 \section{Research Plan}
 \label{sec:research}
 \begin{refsection}[plan]
-  In my studies and work I have gained experience with language design and
-  optimizations of dynamic language VMs. I have written debuggers and
-  live-programming tools in both local and distributed settings and across
-  language boundaries. Although I do not have a data science background, much of
-  my research at Oracle has focused on making Python's data science and machine
-  learning libraries fast and their execution safe even when these libraries
-  include native C code.
-
-  Heterogenous computing hardware has become more widespread and affordable in
-  recent years. At the same time, end-user programmers and data scientists with
-  little or no formal programming education are increasingly writing programs to
-  process large amounts of data. While hardware vendors and the industry and
-  research community have demonstrated libraries (such as OpenMP) and languages
-  (such as CUDA and OpenCL) to take advantage of new hardware capabilities,
-  high-level "scripting" languages such as Python, R, or JavaScript are still
-  popular among the scientific computing community. These languages are
-  inherently single-threaded and not designed for high-performance
-  computing. Although popular libraries such as NumPy, Tensorflow, or
-  scikit-learn work around this problem to an extent, in practice the highly
-  optimized code in these packages is interleaved with high-level language code
-  and thus inherently bottlenecked.
-
-  Big investments were made by Google, Mozilla, Microsoft and others to make
-  JavaScript VMs fast. While a comparable effort has not been expended so far to
-  Python or R, there is interest in the research community and in industry to
-  improve those data science languages as well. But even for JavaScript, the
-  need to balance the needs of the browser environment in which JavaScript is
-  often used with the needs for a high-performance server-side language require
-  trade-offs between warmup time and peak performance. Furthermore, the
-  optimizations applied by state of the art optimizing virtual machines for
-  JavaScript, Python, and other dynamic languages are still mostly focused on
-  making single-threaded execution on the CPU as fast as possible. Making use of
-  auxiliary compute hardware is left to libraries and thus, ultimately, to the
-  user of these languages.
+  I propose to conduct research around optimization of dynamic languages
+  especially in the context of parallel and heterogeneous computing
+  systems. Because more and more data science programming is done by users that
+  have little or no formal programming education, I want to improve languages to
+  provide higher level, declarative abstractions that are not only more
+  expressive and safe to use for such users, but also offer unique runtime
+  optimization opportunities. To make specialized languages and libraries that
+  targets new compute hardware available as much as possible within the existing
+  eco-system, I want also further the research into multi-language tooling and
+  cross-language optimization.
 
   As the typical size of problems for data scientists and end user programmers
   grows and these groups have access to increasingly affordable GPU and FPGA
-  hardware, languages and their optimizing compilers need to improve to provide
-  good performance across wider ranges of hardware and data structures than
-  before. I propose to conduct research towards this goal in three main areas:
+  hardware, languages, their optimizing compilers, and tooling need to improve
+  to provide a good programming experience and good performance across wider
+  ranges of hardware and data structures than before.
+
   \begin{description}
-  \item[Automatic Parallelization and Offloading] I want to continue research upon
-    the state of the art to identify and optimize high level patterns and control
-    flow in languages to make use of auxiliary compute hardware. Work done by
-    \cite{palkar2017weld} on loop fusion and lazy evaluation, by
-    \cite{mattis2015columnar} on columnar objects, \cite{pape2015language} on
-    storage strategies, \cite{qunaibit2018accelerating} on mega-guards, and
-    library-specific optimizations such as Numba by \cite{lam2015numba} or CuPy by
+  \item[Automatic Parallelization and Offloading] While hardware vendors and the
+    industry and research community have demonstrated libraries (such as OpenMP)
+    and languages (such as CUDA and OpenCL) to take advantage of new hardware
+    capabilities, high-level "scripting" languages such as Python, R, or
+    JavaScript are still popular among the scientific computing community. Big
+    investments were made by Google, Mozilla, Microsoft and others to make
+    JavaScript VMs fast. A comparable effort has not been expended so far to
+    Python or R. But even for JavaScript, the need to balance the needs of the
+    browser environment in which JavaScript is often used with the needs for a
+    high-performance server-side language require trade-offs between warmup time
+    and peak performance. Furthermore, the optimizations applied by state of the
+    art optimizing virtual machines for JavaScript, Python, and other dynamic
+    languages are still mostly focused on making single-threaded execution on
+    the CPU as fast as possible. Making use of auxiliary compute hardware is
+    left to libraries and thus, ultimately, to the user of these languages.
+
+    I want to continue research upon the state of the art to identify and
+    optimize high level patterns and control flow in languages to make use of
+    auxiliary compute hardware. Work done by \cite{palkar2017weld} on loop
+    fusion and lazy evaluation, by \cite{mattis2015columnar} on columnar
+    objects, \cite{pape2015language} on storage strategies,
+    \cite{qunaibit2018accelerating} on mega-guards, and library-specific
+    optimizations such as Numba by \cite{lam2015numba} or CuPy by
     \cite{nishino2017cupy} offer promising starting points for higher-level
     optimization techniques.
 
@@ -785,35 +780,51 @@ Town on tools and environments for dynamic languagues and polyglot programming.
     of the optimizing compiler. We need to investigate using learning approaches
     to let the compiler learn the behavior and performance properties of hardware
     to improve optimizations heuristics.
-  \item[Declarative Programming and Data Transformations] Declarative programming
-    techniques provide opportunities for other high-level
-    optimizations. \cite{koksal2012constraints, milicevic2011unifying} and my own
-    work on Babelsberg are recent examples for integrating constraints into
-    imperative languages. \cite{drechsler2014distributed} and
+  \item[Declarative Programming and Dataflow] Although heterogenous computing
+    hardware has become more widespread and affordable in recent years, popular
+    data science languages like R and Python are inherently single-threaded,
+    imperative, and not designed for high-performance computing. Scientific
+    computing libraries such as NumPy, Tensorflow, or scikit-learn abstract from
+    the imperative, single-threaded nature of Python to work around this problem
+    to an extent, but in practice, the highly optimized code in these packages
+    is interleaved with imperative language code and thus inherently
+    bottlenecked by the explicitness of the language semantics.
+
+    Declarative programming techniques provide opportunities for other
+    high-level optimizations. \cite{koksal2012constraints,
+      milicevic2011unifying} and my own work on Babelsberg are recent examples
+    for integrating constraints into imperative
+    languages. \cite{drechsler2014distributed} and
     \cite{DBLP:journals/corr/RamsonH17} are examples of another popular
     declarative approach--reactive programming--integrated with imperative
-    languages. Rather than describing how to collect, transform, and process data,
-    desired outcomes, invariants, and important changes can be set for the
+    languages. Rather than describing how to collect, transform, and process
+    data, desired outcomes, invariants, and important changes can be set for the
     system. The optimal choice of algorithm can thus be a runtime decision based
     on the observed system behavior, available hardware, and input data.
 
     This can allow optimizing compilers to produce code more flexibly than for
     purely imperative programming techniques where the algorithm to find the
     solution is dictated in the code. I plan to continue to work on such
-    programming language features to make languages more expressive and allow for
-    better optimization at the same time.
+    programming language features to make languages more expressive and allow
+    for better optimization at the same time.
   \item[Multi-language Optimization and Tooling] Popular scripting languages do
-    not allow all programming paradigms to exist equally. Additionally, libraries
-    of interest to users or with specific features may not be available for all
-    languages. The increasingly common notebook-style development environments can
-    be a starting point for combining multiple different languages in a convenient
+    not allow all programming paradigms to exist equally. Additionally,
+    libraries of interest to users or with specific features may not be
+    available for all languages. This is increasingly a problem as new hardware
+    becomes available and not all languages provide libraries to make use of the
+    new features. Thus, there is a desire to mix multiple languages in a runtime
+    without sacrificing performance or safety guarantees of some of the used
+    languages.
+
+    The increasingly common notebook-style development environments can be a
+    starting point for combining multiple different languages in a convenient
     way, as \cite{DBLP:journals/programming/NiephausFPHT18} have demonstrated in
     our recent collaborations between Oracle Labs and the HPI.
 
     I plan to conduct further research into polyglot programming tools and
-    environments, as well as the optimization across language boundaries. This may
-    help programmers be able to choose the proper abstractions in different parts
-    of their code without having to sacrifice performance or tooling.
+    environments, as well as the optimization across language boundaries. This
+    may help programmers be able to choose the proper abstractions in different
+    parts of their code without having to sacrifice performance or tooling.
   \end{description}
 
   \printbibliography[prefixnumbers=P,resetnumbers,heading=none]
@@ -824,61 +835,60 @@ Town on tools and environments for dynamic languagues and polyglot programming.
 \section{Teaching Plan}
 \label{sec:teaching}
 
-I would be happy to help with the teaching of fundamentals. Especially the
-courses ``Einführung in die Programmierung'' and ``Softwaretechnik und
-Programmierparadigmen'' seem to also fit well with the research group you are
-establishing. In the past I have enjoyed teaching in the first semesters
-immensely, as it gives me the opportunity to observe the changes in preexisting
-knowledge and expectations for personal development that students start with
-into a computer science curriculum.
+During my PhD and post-doc, as well as after joining Oracle I have enjoyed
+teaching at both the undergraduate and graduate levels. I am happy to interact
+with students at different levels in their education to observe the changes in
+preexisting knowledge and expectations about computer science. I would like to
+offer introductory courses relating to programming as a practice, languages,
+tools, and environments.
 
-% Ich würde mich freuen in Grundlagenlehre zu helfen. Insbesondere könnte ich mir
-% dies für die ``Einführung in die Programmierung'' als auch ``Softwaretechnik und
-% Programmierparadigmen'' sowie verwandte Einführungsveranstaltungen vorstellen.
-
-In der fachbereichsspezifischen Lehre möchte ich mich insbesondere in
-Projektseminaren an aktuellen Forschungsthemen und Fragestellungen der Industrie
-orientieren. Zunächst kann ich mir zum Beispiel folgende fachgebietsspezifische
-Veranstaltungen vorstellen:
+For courses relating more closely to my research, I would like to keep my
+teaching focused on topics relevant not only to the research community, but also
+to current practitioners. Some examples of the kinds of courses I would imagine
+giving are described below. I believe these can flexibly be tuned to both
+graduate and undergraduate levels, depending on other available courses and the
+level of the students.
 
 \begin{description}
-\item[Declarative Programming Concepts] Bachelor? Die deklarative Programmierung
-  verspricht Großes: die Programmierer formulieren nurmehr ein Problem und der
-  Computer löst es. Im Rahmen dieser Veranstaltung werden die Studierenden an
-  deklarative Programmiersprachen und -spracherweiterungen zur
-  constraint-basierten, logischen und reaktiven Programmierung herangeführt. Als
-  Projektarbeit arbeiten sich die Studierenden tiefer in konkrete
-  Implementierungen solcher Art ein und können zum Ende der Veranstaltung
-  konkrete Stärken und Schwächen der untersuchten Implementierung beurteilen.
-\item[Virtual Machines and Execution Environments] Master? Viele insbesondere dynamische
-  Programmiersprachen können nutzen eine VM Abstraktion. Dies geschieht zum Teil
-  um Portabilität zu vereinfachen, aber auch um die Ausführungsgeschwindigkeit
-  durch Runtime-Feedback zu verbessern. In dieser Veranstaltung lernen
-  Studierende die grundlegenden Konzepte von VMs mit JIT Compilern kennen und
-  können in Projektarbeit Erweiterungen an existierenden VMs entwickeln.
-\item[Runtime Data Structure Optimizations] Master? Aufbauend auf dem Wissen aus
-  ``Virtual Machines and Execution Environments'' lernen die Studierenden in
-  dieser Veranstaltung fortgeschrittene JIT Konzepte kennen. Dazu gehören
-  Optimierungen wie Storage Strategies (als eine Instanz des Data Structure
-  Inlining), Boxing Elimination, Columnar Object Layouts und mehr. Die
-  Studierenden können selbst anhand von existierenden VMs mit diesen
-  Optimierungen experimentieren.
-\item[Parsing and Compiling] Bachelor? Im Rahmen dieser Vorlesung lernen die
-  Studierenden verschiedene Techniken des Parsings und des statischen Compilings
-  und Optimierung kennen. In Übungen wenden Sie die Konzepte anhand kleiner
-  Sprachen an.
-\item[History of Programming Languages] Viele Programmiersprachen die heute in
-  Verwendung sind haben bereits eine lange Geschichte: C (1972), C++ (1985),
-  Python (1990) oder Java (1995) und JavaScript (1995) sind älter als die
-  meisten Studierenden. Sowohl die Entwicklungsgeschichte dieser Sprachen als
-  auch die von heute weniger weit verbreiteter Sprachen ermöglichen Erkentnisse
-  über verschiedenste Probleme des Programmiersprachdesigns. Im Rahmen dieser
-  Veranstaltung können Studenten sich intensiv mit heute weniger populären
-  Sprachen auseinandersetzen und gemeinsam verschiedene Sprachkonzepte
-  harausarbeiten und diskutieren.
-\item[Polyglot Programming]
-\item[Programming Tools and Environments]
-\item[Operational Semantics of Programming Languages]
+\item[Declarative Programming] Declarative programming promises a lofty goal:
+  the programmer describes a problem and the system finds a way to solve it. In
+  this course, students would learn about logic, constraint-oriented, data-flow,
+  and reactive programming systems and language extensions. Student projects
+  could involve working with or on a specific language or language extension and
+  presenting or writing coursework about concrete advantages and disadvantages.
+\item[Parsers, Interpreters, and Compilers] In this course students would learn
+  the basics of parsing, interpreting, compiling, and optimizing programs. This
+  course would come with exercises and either a final test or coursework to hand
+  in.
+\item[Virtual Machines and Execution Environments] Many, especially dynamic,
+  programming languages use a virtual machine abstraction. In part this is done
+  to improve portability, but VMs also provide automatic memory management,
+  safety managers, runtime compilers, or low-level intercession points. In this
+  course, students learn about these concepts. Students projects could involve
+  implementing new features or doing experiments on existing virtual machines,
+  evaluating, and presenting them.
+\item[Runtime Data Structure Optimizations] As an extension to runtime
+  optimization, virtual machines have begun dynamically optimizing in-memory
+  data layouts based on runtime feedback. These advanced optimization techniques
+  are not yet present in many VMs, but are an active area of research. This
+  course would build upon the VM course to teach these advanced topics in a
+  practical manner.
+\item[History of Programming Languages] Many programming languages in widespread
+  use today have a long history: C (1972), C++ (1985), Python (1990) oder Java
+  (1995) und JavaScript (1995) are older than many of today's students. Their
+  development history, as well as the history of languages less widespread today
+  allow insights into many different problems and questions of programming
+  language design that we take for granted or regard as solved today. In this
+  course, students can deep-dive into some more niche languages, learn about and
+  engage with their specialities and discuss in presentations with the rest of
+  the course.
+\item[Polyglot Programming] Polyglot programming is already widespread via C
+  extensions, foreign function interfaces, or even 1:1 adapters between specific
+  languages. However, tools and environments today do not adequately connect
+  different languages. This makes polyglot development unsuitable for many
+  programmers. In this course, students can experiment with multi-lingual
+  runtimes and design and implement tools and IDE extensions to aid polyglot
+  programming.
 \end{description}
 
 \phantomsection
