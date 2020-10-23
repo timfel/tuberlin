@@ -171,9 +171,12 @@
   \par\addvspace{1ex}%
   \phantomsection{}% reset the anchor for hyperrefs
   \addcontentsline{toc}{subsection}{#1}%
-  \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
- 	  \raggedleft\hintstyle{} &{\strut\subsectionstyle{#1}}%
-  \end{tabular}%
+  \parbox[t]{\hintscolumnwidth}{\strut\raggedleft\raisebox{1.5\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.25ex}}}%
+  % \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+  %         \raggedleft\hintstyle{} &{\strut\subsectionstyle{#1}}%
+                                      %     \end{tabular}%
+  \hspace{\separatorcolumnwidth}%
+  \parbox[t]{\maincolumnwidth}{\strut\subsectionstyle{#1}}%
   \par\nobreak\addvspace{0.5ex}\@afterheading}% to avoid a pagebreak after the heading
 
 \renewcommand*{\cvitem}[3][.25em]{%
@@ -263,7 +266,7 @@
   \begin{minipage}{.5\textwidth}%
     \raggedleft%
     \addressfont\textcolor{color2}{%
-      {\bfseries\upshape\@firstname~\@familyname}\@firstdetailselementfalse%
+      {\upshape\@firstname~\@familyname}\@firstdetailselementfalse%
       \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
         \ifthenelse{\equal{\@addresscity}{}}{}{\makenewline\@addresscity}}%
       \ifthenelse{\isundefined{\@mobile}}{}{\makenewline\mobilesymbol\@mobile}%
@@ -296,7 +299,7 @@
 
 \renewcommand*{\makeletterclosing}{
   \@closing\\[3em]%
-  {\bfseries \@firstname~\@familyname}%
+  {\@firstname~\@familyname}%
   \ifthenelse{\isundefined{\@enclosure}}{}{%
     \\%
     \vfill%
