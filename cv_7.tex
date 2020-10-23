@@ -911,9 +911,10 @@ other available courses.
 \vspace*{\fill}
 \parbox[t]{\hintscolumnwidth}{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.95ex}}}
 \hspace{\separatorcolumnwidth}
-\parbox[t]{\maincolumnwidth}{\strut\sectionstyle{\Huge Certificates}}\\
-PhD thesis\\
-Master's
+\parbox[t]{\maincolumnwidth}{\strut\sectionstyle{\Huge Certificates}}\\[4\parskip]
+\cvitem{}{\hyperref[sec:phd]{Doctoral Certificate}}
+\cvitem{}{\hyperref[sec:msc]{Master of Science Certificate}}
+\cvitem{}{\hyperref[sec:bsc]{Bachelor of Science Certificate}}
 \vspace{\fill}
 \newpage
 
@@ -927,7 +928,7 @@ Master's
 
 \phantomsection
 \label{sec:bsc}
-\includepdf[pages=-]{bsccert.pdf}
+% \includepdf[pages=-]{bsccert.pdf}
 
 \phantomsection
 \label{sec:evaluation}
@@ -944,23 +945,67 @@ Master's
 \clearpage
 \phantomsection
 \label{sec:selected-publications}
-\thispagestyle{plain}
-\vspace*{\fill}
+\thispagestyle{plain} \vspace*{\fill}
 \parbox[t]{\hintscolumnwidth}{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.95ex}}}
 \hspace{\separatorcolumnwidth}
-\parbox[t]{\maincolumnwidth}{\strut\sectionstyle{\Huge Selected Publications}}
+\parbox[t]{\maincolumnwidth}{\strut\sectionstyle{\Huge Selected Publications}}\\[4\parskip]
+
+\cvmultilineitem{}{%
+  \textbf{\hyperref[sec:paper1]{Checks and Balances: Constraint Solving without
+    Surprises in Object-Constraint Programming Languages}}}{%
+  This OOPSLA paper provides a summary of the design of Babelsberg to show that
+  it is deterministic even in the presence of polymorphic dispatch, mutable
+  objects, and object identity that can interact with the constraints.}
+
+\cvmultilineitem{}{%
+  \textbf{\hyperref[sec:paper2]{Babelsberg/JS: A Browser-based Implementation of an
+    Object Constraint Language}}}{%
+  This ECOOP paper contains two important steps for object-constraint
+  programming: making Babelsberg available in a language without requiring VM
+  modifications, and demonstrating an extensible architecture to let different
+  constraint solvers cooperate, a first step towards automatically selecting
+  solver procedures to optimize program runtime.}
+
+\cvmultilineitem{}{%
+  \textbf{\hyperref[sec:paper3]{Live Multi-language Development and Runtime
+    Environments}}}{%
+  This ‹Programming› Journal paper shows that extending multi-language
+  development to the environments and tools written in one or more of the
+  involved languages can provide a fundamentally better programming experience
+  than if multi-lingual development happens using either a multitude of tools or
+  tools that represent a least common denominator.}
+
+\cvmultilineitem{}{%
+  \textbf{\hyperref[sec:paper4]{A World of Active Objects for Work and Play: The
+      First Ten Years of Lively}}}{%
+  In this Onward! paper we as the principal researchers who worked on the
+  ``Lively'' systems over time reflect on what we learned about live, online,
+  collaborative programming environments.}
+
 \vspace{\fill}
 \newpage
 
+\phantomsection
+\label{sec:paper1}
 \includepdf[pages=-]{papers/FelgentreffMillsteinBorningHirschfeld_2015_ChecksAndBalancesConstraintSolvingWithoutSurprisesInObjectConstraintProgrammingLanguages_AuthorsVersion.pdf}
 
-\includepdf[pages=-]{papers/FelgentreffPapeReinHirschfeld_2016_HowToBuildAHighPerformanceVmForSqueakSmalltalkInYourSpareTimeAnExperienceReportOfUsingTheRPythonToolchain_AcmDL.pdf}
+\phantomsection
+\label{sec:paper2}
+\includepdf[pages=-]{papers/FelgentreffBorningHirschfeldLinckeOhshimaFreudenbergKrahn_2014_BabelsbergJsABrowserBasedImplementationOfAnObjectConstraintLanguage_SpringerLNCS.pdf}
+% \includepdf[pages=-]{papers/FelgentreffPapeReinHirschfeld_2016_HowToBuildAHighPerformanceVmForSqueakSmalltalkInYourSpareTimeAnExperienceReportOfUsingTheRPythonToolchain_AcmDL.pdf}
 
-\includepdf[pages=-]{papers/FelgentreffLinckeHirschfeldThamsen_2015_LivelyGroupsSharedBehaviorInAWorldOfObjectsWithoutClassesOrPrototypes_AuthorsVersion.pdf}
+\phantomsection
+\label{sec:paper3}
+\includepdf[pages=-]{papers/NiephausFelgentreffPapeHirschfeldTaeumel_2018_LiveMultiLanguageDevelopmentAndRuntimeEnvironments.pdf}
+% \includepdf[pages=-]{papers/FelgentreffHirschfeldGraberBorningMasuhara_2016_DeclaringConstraintsOnObjectOrientedCollections_IPSJ-TPRO0904003.pdf}
 
-\includepdf[pages=-]{papers/FelgentreffHirschfeldGraberBorningMasuhara_2016_DeclaringConstraintsOnObjectOrientedCollections_IPSJ-TPRO0904003.pdf}
+\phantomsection
+\label{sec:paper4}
+\includepdf[pages=-]{papers/IngallsFelgentreffHirschfeldKrahnLinckeRoederTaivalsaariMikkonen_2016_AWorldOfActiveObjectsForWorkAndPlayTheFirstTenYearsOfLively_AuthorsVersion.pdf}
 
-\includepdf[pages=-]{papers/FelgentreffLehmannHirschfeldGerstenbergReschkeRueckertSieglerGraichenNicolaiSwart_2016_AutomaticallySelectingAndOptimizingConstraintSolverProceduresForObjectConstraintLanguages_AuthorsVersion.pdf}
+% \includepdf[pages=-]{papers/FelgentreffLinckeHirschfeldThamsen_2015_LivelyGroupsSharedBehaviorInAWorldOfObjectsWithoutClassesOrPrototypes_AuthorsVersion.pdf}
+
+% \includepdf[pages=-]{papers/FelgentreffLehmannHirschfeldGerstenbergReschkeRueckertSieglerGraichenNicolaiSwart_2016_AutomaticallySelectingAndOptimizingConstraintSolverProceduresForObjectConstraintLanguages_AuthorsVersion.pdf}
 
 \end{document}
 %%% Local Variables:
