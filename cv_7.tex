@@ -776,25 +776,25 @@ Town on tools and environments for dynamic languagues and polyglot programming.
     the CPU as fast as possible. Making use of auxiliary compute hardware is
     left to libraries and thus, ultimately, to the user of these languages.
 
-    I want to continue research upon the state of the art to identify and
-    optimize high level patterns and control flow in languages to make use of
-    auxiliary compute hardware. Work done by \cite{palkar2017weld} on loop
-    fusion and lazy evaluation, by \cite{mattis2015columnar} on columnar
-    objects, \cite{pape2015language} on storage strategies,
+    Work done by \cite{palkar2017weld} on loop fusion and lazy evaluation, by
+    \cite{mattis2015columnar} on columnar objects, by myself and
+    \cite{pape2015language} on storage strategies,
     \cite{qunaibit2018accelerating} on mega-guards, and library-specific
     optimizations such as Numba by \cite{lam2015numba} or CuPy by
     \cite{nishino2017cupy} offer promising starting points for higher-level
-    optimization techniques.
+    optimization techniques. Using runtime feedback in our Python implementation
+    on GraalVM, for example, we have found that we can vectorize Python-level
+    loops. Building upon that, we should be able to determine when a Python loop
+    runs long enough and over enough data to warrant offloading to a GPU for
+    highly parallel processing. With distributed and multi-tenant systems,
+    available processing hardware, communication overhead, and load are not
+    fixed and under the control of the optimizing compiler.
 
-    Using runtime feedback in our Python implementation on GraalVM, for example,
-    we have found that we can vectorize Python-level loops. Building upon that,
-    we should be able to determine when a Python loop runs long enough and over
-    enough data to warrant offloading to a GPU for highly parallel
-    processing. With distributed and multi-tenant systems, available processing
-    hardware, communication overhead, and load are not fixed and under the
-    control of the optimizing compiler. I plan to investigate using learning
-    approaches to let the compiler learn the behavior and performance properties
-    of hardware to improve optimizations heuristics.
+    I want to continue research upon the state of the art to identify and
+    optimize high level patterns and control flow in languages to make use of
+    auxiliary compute hardware. I plan to investigate using learning approaches
+    to let the compiler learn the behavior and performance properties of
+    hardware to improve optimizations heuristics.
   \item[Declarative Programming and Dataflow] Although heterogenous computing
     hardware has become more widespread and affordable in recent years, popular
     data science languages like R and Python are inherently single-threaded,
@@ -833,8 +833,9 @@ Town on tools and environments for dynamic languagues and polyglot programming.
 
     The increasingly common notebook-style development environments can be a
     starting point for combining multiple different languages in a convenient
-    way, as \cite{DBLP:journals/programming/NiephausFPHT18} have demonstrated in
-    our recent collaborations between Oracle Labs and the HPI.
+    way, as we have demonstrated with
+    \cite{DBLP:journals/programming/NiephausFPHT18} our recent collaborations
+    between Oracle Labs and the HPI.
 
     I plan to conduct further research into polyglot programming tools and
     environments, as well as the optimization across language boundaries. This
