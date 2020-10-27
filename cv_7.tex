@@ -97,14 +97,13 @@
 \closing{Best regards,} % Closing phrase
 \enclosure[Attachments]{
   \begin{minipage}[t]{0.8\linewidth}
-    \hyperref[sec:cv]{Curriculum Vit\ae{}},
-    \hyperref[sec:past-teaching]{Teaching Experience},
-    \hyperref[sec:publications]{List of Publications},
-    \hyperref[sec:msc]{Master of Science Certificate},
-    \hyperref[sec:phd]{Doctoral Certificate},
-    \hyperref[sec:research]{Research Proposal},
-    \hyperref[sec:teaching]{Prospective Teaching},
-    \hyperref[sec:selected-publications]{Copies of Selected Publications},
+    \hyperref[sec:cv]{Curriculum Vit\ae{}} ·
+    \hyperref[sec:past-teaching]{Teaching Experience} ·
+    \hyperref[sec:publications]{List of Publications} ·
+    \hyperref[sec:certs]{Doctoral, Msc, and Bsc Certificates} ·
+    \hyperref[sec:research]{Research Proposal} ·
+    \hyperref[sec:teaching]{Prospective Teaching} ·
+    \hyperref[sec:selected-publications]{Copies of Selected Publications} ·
     \hyperref[sec:evaluation]{Detailed Student Evaluations}
   \end{minipage}
 } % List of enclosed documents
@@ -929,6 +928,8 @@ other available courses.
 \parbox[t]{\hintscolumnwidth}{\strut\raggedleft\raisebox{\baseletterheight}{\color{color1}\rule{\hintscolumnwidth}{0.95ex}}}
 \hspace{\separatorcolumnwidth}
 \parbox[t]{\maincolumnwidth}{\strut\sectionstyle{\Huge Certificates}}\\[4\parskip]
+\phantomsection
+\label{sec:certs}
 \cvitem{}{\hyperref[sec:phd]{Doctoral Certificate}}
 \cvitem{}{\hyperref[sec:msc]{Master of Science Certificate}}
 \cvitem{}{\hyperref[sec:bsc]{Bachelor of Science Certificate}}
@@ -941,11 +942,11 @@ other available courses.
 
 \phantomsection
 \label{sec:msc}
-\includepdf[pages=-]{msccert.pdf}
+\includepdf[pages=-,rotateoversize=true]{msccert.pdf}
 
 \phantomsection
 \label{sec:bsc}
-% \includepdf[pages=-]{bsccert.pdf}
+\includepdf[pages=-,rotateoversize=true]{bsccert.pdf}
 
 \phantomsection
 \label{sec:evaluation}
